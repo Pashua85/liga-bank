@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import enterImg from '../../assets/enter.svg';
 import logoDesk from '../../assets/logo-desktop.png';
-import {MAIN_FONT_COLOR} from '../app/style';
+import logoTab from '../../assets/logo-tab.png';
+import {MAIN_FONT_COLOR, DEVICE} from '../../style-consts';
 
 export const HeaderStyled = styled.div`
   background-color: #F6F7FF;
@@ -14,6 +15,11 @@ export const Container = styled.div`
   max-width: 1645px;
   min-height: 91px;
   width: 85.652%;
+
+  @media ${DEVICE.TABLET} {
+    min-height: 69px;
+    width: 88.28%;
+  }
 `;
 
 export const Logo = styled.div`
@@ -27,6 +33,18 @@ export const Logo = styled.div`
   margin-right: 58px;
   position: relative;
 
+  @media ${DEVICE.TABLET} {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: -5px;
+    margin-right: 64px;
+    padding-left: 34px;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    color: red;
+  }
+
   &:before {
     background-image: url(${logoDesk});
     background-size: cover;
@@ -36,6 +54,14 @@ export const Logo = styled.div`
     left: -38px;
     position: absolute;
     width: 30px;
+
+    @media ${DEVICE.TABLET} {
+      background-image: url(${logoTab});
+      bottom: 2px;
+      height: 24px;
+      left: 0;
+      width: 26px;
+    }
   }
 `;
 
@@ -50,6 +76,12 @@ export const Login = styled.a`
   text-decoration: none;
   padding-left: 30px;
   position: relative;
+
+  @media ${DEVICE.TABLET} {
+    font-size: 0;
+    outline: 1px solid green;
+    padding-left: 20px;
+  }
 
   &:before {
     background: url(${enterImg});
