@@ -5,6 +5,7 @@ import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../style-consts';
 
 export const HeaderStyled = styled.div`
   background-color: #F6F7FF;
+  z-index: 200;
   
   @media ${DEVICE.MOBILE} {
     position: relative;
@@ -33,16 +34,39 @@ export const Container = styled.div`
 export const BurgerWrapper = styled.div`
   display: none;
   width: 16px;
-  height: 10px;
-  background-color: red;
+  height: 16px;
+  margin-right: 15px;
 
   @media ${DEVICE.MOBILE} {
     display: block;
-    margin-right: 15px;
+    position: relative;
   }
 `;
 
 export const BurgerIcon = styled.div`
+  background-color: ${MAIN_FONT_COLOR};
+  height: 1px;
+  margin-top: -.5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  &:before, &:after {
+    background-color: ${MAIN_FONT_COLOR};
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:before {
+    top: -5px;
+  }
+
+  &:after {
+    top: 5px;
+  }
 `;
 
 export const Logo = styled.div`

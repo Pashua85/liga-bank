@@ -1,5 +1,19 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../style-consts';
+
+const moveDown = keyframes`
+  ß0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+`;
 
 export const Nav = styled.nav<{isOpen: boolean}>`
   @media ${DEVICE.TABLET} {
@@ -7,12 +21,15 @@ export const Nav = styled.nav<{isOpen: boolean}>`
   }
 
   @media ${DEVICE.MOBILE} {
+    background-color: #F6F7FF;
     display: ${({isOpen}) => isOpen ? `block` : `none`};
     padding-bottom: 0;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 100;
+    animation-name: ${moveDown};
+    animation-duration: 4s;
   }
 `;
 
