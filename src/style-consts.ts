@@ -15,6 +15,7 @@ export function fontFace(name: string, src: string, fontWeight: string | number 
 }
 
 export const MAIN_FONT_COLOR = `#1F1E25`;
+export const HOVER_FONT_COLOR = `rgba(31,30,37,.6)`;
 
 export const DEVICE = {
   MOBILE: `(max-width: 767px)`,

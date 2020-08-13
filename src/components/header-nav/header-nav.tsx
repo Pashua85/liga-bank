@@ -1,9 +1,13 @@
 import React, {FunctionComponent} from 'react';
-import {Nav, BurgerIcon, BurgerWrapper, NavItem, NavLink, NavList} from './style';
+import {Nav, NavItem, NavLink, NavList} from './style';
 
-const HeaderNav: FunctionComponent = () => {
+interface HeaderNavProps {
+  isOpen: boolean
+}
+
+const HeaderNav: FunctionComponent<HeaderNavProps> = ({isOpen}) => {
   return (
-    <Nav>
+    <Nav isOpen={isOpen}>
       <NavList>
         <NavItem>
           <NavLink href="#">Услуги</NavLink>

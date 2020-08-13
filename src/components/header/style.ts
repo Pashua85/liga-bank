@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 import enterImg from '../../assets/enter.svg';
-import logoDesk from '../../assets/logo-desktop.png';
-import logoTab from '../../assets/logo-tab.png';
-import {MAIN_FONT_COLOR, DEVICE} from '../../style-consts';
+import logoImg from '../../assets/logo.svg';
+import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../style-consts';
 
 export const HeaderStyled = styled.div`
   background-color: #F6F7FF;
+  
+  @media ${DEVICE.MOBILE} {
+    position: relative;
+  }
 `;
 
 export const Container = styled.div`
@@ -20,6 +23,26 @@ export const Container = styled.div`
     min-height: 69px;
     width: 88.28%;
   }
+
+  @media ${DEVICE.MOBILE} {
+    min-height: 48px;
+    width: 90.63%;
+  }
+`;
+
+export const BurgerWrapper = styled.div`
+  display: none;
+  width: 16px;
+  height: 10px;
+  background-color: red;
+
+  @media ${DEVICE.MOBILE} {
+    display: block;
+    margin-right: 15px;
+  }
+`;
+
+export const BurgerIcon = styled.div`
 `;
 
 export const Logo = styled.div`
@@ -32,6 +55,7 @@ export const Logo = styled.div`
   line-height: 23px;
   margin-right: 58px;
   position: relative;
+  user-select: none;
 
   @media ${DEVICE.TABLET} {
     font-size: 18px;
@@ -42,11 +66,14 @@ export const Logo = styled.div`
   }
 
   @media ${DEVICE.MOBILE} {
-    color: red;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0;
+    padding-left: 24px;
   }
 
   &:before {
-    background-image: url(${logoDesk});
+    background-image: url(${logoImg});
     background-size: cover;
     bottom: 4px;
     content: '';
@@ -56,11 +83,18 @@ export const Logo = styled.div`
     width: 30px;
 
     @media ${DEVICE.TABLET} {
-      background-image: url(${logoTab});
+      background-image: url(${logoImg});
+      background-image: contain;
       bottom: 2px;
       height: 24px;
       left: 0;
       width: 26px;
+    }
+
+    @media ${DEVICE.MOBILE} {
+      height: 18px;
+      width: 19px;
+      bottom: 4px;
     }
   }
 `;
@@ -76,15 +110,33 @@ export const Login = styled.a`
   text-decoration: none;
   padding-left: 30px;
   position: relative;
+  user-select: none;
+
+  &:hover {
+    color: ${HOVER_FONT_COLOR};
+  }
 
   @media ${DEVICE.TABLET} {
     font-size: 0;
-    outline: 1px solid green;
     padding-left: 20px;
   }
 
+  @media ${DEVICE.MOBILE} {
+    padding-left: 14px;
+
+    &:hover:after {
+      background: rgba(246,247,255,.4);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
   &:before {
-    background: url(${enterImg});
+    background-image: url(${enterImg});
     content: '';
     height: 22px;
     left: 0;
@@ -92,5 +144,12 @@ export const Login = styled.a`
     position: absolute;
     top: 50%;
     width: 20px;
+
+    @media ${DEVICE.MOBILE} {
+      background-size: contain;
+      height: 16px;
+      margin-top: -8px;
+      width: 14px;
+    }
   }
 `;
