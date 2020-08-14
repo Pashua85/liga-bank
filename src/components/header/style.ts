@@ -43,8 +43,8 @@ export const BurgerWrapper = styled.div`
   }
 `;
 
-export const BurgerIcon = styled.div`
-  background-color: ${MAIN_FONT_COLOR};
+export const BurgerIcon = styled.div<{isOpen: boolean}>`
+  background-color: ${({isOpen}) => isOpen ? `transparent` : MAIN_FONT_COLOR};
   height: 1px;
   margin-top: -.5px;
   position: absolute;
@@ -61,11 +61,13 @@ export const BurgerIcon = styled.div`
   }
 
   &:before {
-    top: -5px;
+    top: ${({isOpen}) => isOpen ? `0` : `-5px`};
+    transform: ${({isOpen}) => isOpen ? `rotate(135deg)` : ``}
   }
 
   &:after {
-    top: 5px;
+    top: ${({isOpen}) => isOpen ? `0` : `5px`};
+    transform: ${({isOpen}) => isOpen ? `rotate(-135deg)` : ``}
   }
 `;
 

@@ -9,14 +9,18 @@ const Header: FunctionComponent = () => {
     setIsOpen(!isOpen);
   }
 
+  function handleLinkClick() {
+    setIsOpen(false);
+  }
+
   return (
     <HeaderStyled>
       <Container>
         <BurgerWrapper onClick={handleBurgerClick}>
-          <BurgerIcon />
+          <BurgerIcon isOpen={isOpen} />
         </BurgerWrapper>
         <Logo>ЛИГА Банк</Logo>
-        <HeaderNav isOpen={isOpen} />
+        <HeaderNav isOpen={isOpen} onLinkClick={handleLinkClick} />
         <Login href="#">Войти в Интернет-банк</Login>
       </Container>
     </HeaderStyled>
