@@ -43,10 +43,10 @@ export const BurgerWrapper = styled.div`
   }
 `;
 
-export const BurgerIcon = styled.div<{isOpen: boolean}>`
-  background-color: ${({isOpen}) => isOpen ? `transparent` : MAIN_FONT_COLOR};
+export const BurgerIcon = styled.div<{state: string}>`
+  background-color: ${({state}) => (state === `entering` || state === `entered`) ? `transparent` : MAIN_FONT_COLOR};;
   height: 1px;
-  margin-top: -.5px;
+  margin-top: -.5px;  
   position: absolute;
   top: 50%;
   width: 100%;
@@ -61,13 +61,15 @@ export const BurgerIcon = styled.div<{isOpen: boolean}>`
   }
 
   &:before {
-    top: ${({isOpen}) => isOpen ? `0` : `-5px`};
-    transform: ${({isOpen}) => isOpen ? `rotate(135deg)` : ``}
+    transition: all .2s;
+    top: ${({state}) => (state === `entering` || state === `entered`) ? `0` : `-5px`};
+    transform: ${({state}) => (state === `entering` || state === `entered`) ? `rotate(135deg)` : ``};
   }
 
   &:after {
-    top: ${({isOpen}) => isOpen ? `0` : `5px`};
-    transform: ${({isOpen}) => isOpen ? `rotate(-135deg)` : ``}
+    transition: all .2s;
+    top: ${({state}) => (state === `entering` || state === `entered`) ? `0` : `5px`};
+    transform: ${({state}) => (state === `entering` || state === `entered`) ? `rotate(-135deg)` : ``};
   }
 `;
 
