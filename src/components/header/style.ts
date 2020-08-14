@@ -5,7 +5,6 @@ import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../style-consts';
 
 export const HeaderStyled = styled.div`
   background-color: #F6F7FF;
-  z-index: 200;
   
   @media ${DEVICE.MOBILE} {
     position: relative;
