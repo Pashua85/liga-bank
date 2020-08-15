@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../style-consts';
+import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../variables';
 
 
 export const Nav = styled.nav<{isOpen: boolean, state: string}>`

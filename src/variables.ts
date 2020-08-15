@@ -21,3 +21,6 @@ export const DEVICE = {
   MOBILE: `(max-width: 767px)`,
   TABLET: `(max-width: 1023px)`,
 };
+
+export const TAB_BREAKPOINT = 780;
+export const DESK_BREAKPOINT = 1024;

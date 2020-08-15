@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import enterImg from '../../assets/enter.svg';
 import logoImg from '../../assets/logo.svg';
-import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../style-consts';
+import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../variables';
 
 export const HeaderStyled = styled.div`
   background-color: #F6F7FF;
