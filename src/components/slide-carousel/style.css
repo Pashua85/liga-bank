@@ -1,0 +1,38 @@
+.slide-carousel .carousel-control-prev span {
+  display: none;
+}
+
+.slide-carousel .carousel-control-next span {
+  display: none;
+}
+
+.slide-carousel .carousel-indicators {
+  margin-bottom: 40px;
+}
+
+.slide-carousel .carousel-indicators li {
+  background-color: #2028B6;
+  border-bottom: 0;
+  border-radius: 50%;
+  border-top: 0;
+  height: 8px;
+  margin-left: 0;
+  opacity: 1;
+  width: 8px;
+}
+
+.slide-carousel .carousel-indicators li:not(:last-child) {
+  margin-right: 8px;
+}
+.slide-carousel .carousel-indicators li:last-child {
+  margin-right: 0;
+}
+
+.slide-carousel .carousel-indicators .active:nth-child(1),
+.slide-carousel .carousel-indicators .active:nth-child(2) {
+  background-color: #F6F7FF;
+}
+
+.slide-carousel .carousel-indicators .active:nth-child(3) {
+  background-color: #E0E0E0;
+}

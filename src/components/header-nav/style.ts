@@ -15,6 +15,7 @@ export const Nav = styled.nav<{isOpen: boolean, state: string}>`
     transition: all .4s;
     top: 100%;
     left: 0;
+    z-index: 100;
   }
 `;
 
@@ -57,6 +58,7 @@ export const NavLink = styled.a`
 
   &:hover {
     color: ${HOVER_FONT_COLOR};
+    text-decoration: none;
   }
 
   @media ${DEVICE.TABLET} {
