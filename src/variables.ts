@@ -24,3 +24,8 @@ export const DEVICE = {
 
 export const TAB_BREAKPOINT = 780;
 export const DESK_BREAKPOINT = 1024;
+
+export const BREAKPOINTS = {
+  MOBILE: 767,
+  TAB: 1023
+};
