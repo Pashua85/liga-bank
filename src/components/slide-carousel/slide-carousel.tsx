@@ -34,6 +34,11 @@ const SlideCarousel: FunctionComponent = () => {
             })}
             alt="first-slide"
           />
+          <Carousel.Caption>
+            <h1 className="caption-header .caption-header--white">Лига Банк</h1>
+            <p className="caption-text .caption-text--white">Кредиты на любой случай</p>
+            <a href="/" className="caption-btn caption-btn--white">Рассчитать кредит</a>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -45,6 +50,10 @@ const SlideCarousel: FunctionComponent = () => {
             })}
             alt="second-slide"
           />
+          <Carousel.Caption>
+            <h1 className="caption-header caption-header--black">Лига Банк</h1>
+            <p className="caption-text caption-text--black">Ваша уверенность в завтрашнем дне</p>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -56,6 +65,11 @@ const SlideCarousel: FunctionComponent = () => {
             })}
             alt="third-slide"
           />
+          <Carousel.Caption>
+            <h1 className="caption-header caption-header--black">Лига Банк</h1>
+            <p className="caption-text caption-text--black">Всегда рядом</p>
+            <a href="/" className="caption-btn caption-btn--blue">Найти отделение</a>
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

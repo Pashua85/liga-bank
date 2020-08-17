@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
-import {fontFace, MAIN_FONT_COLOR} from '../../variables';
+import {MAIN_FONT_COLOR} from '../../variables';
+import {setFontFace} from '../../assets/setFontFace';
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -10,15 +11,17 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  ${fontFace(`Roboto`, `Roboto-Regular`, `normal`, `normal`)}
-  ${fontFace(`Work-Sans`, `WorkSans-Bold`, `normal`, `normal`)}
+  ${setFontFace(`Roboto`, `Roboto-Regular`, `normal`, `normal`)}
+  ${setFontFace(`Work-Sans`, `WorkSans-Bold`, `normal`, `normal`)}
+  ${setFontFace(`Roboto`, `Roboto-Medium`, 500, `normal`)}
+  ${setFontFace(`Roboto`, `Roboto-Bold`, `bold`, `normal`)}
 
   body {
     box-sizing: border-box;
     color: ${MAIN_FONT_COLOR};
     height: 100%;
     line-height: 130%;
-    font-family: 'Work-Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    font-family: 'Roboto','Work-Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     font-size: 18px;
