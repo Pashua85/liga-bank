@@ -1,7 +1,7 @@
 import React, {FunctionComponent, useState} from 'react';
 import {useViewport} from '../../hooks/useViewport';
 import {chooseSrc} from '../../assets/chooseSrc';
-import './style.css';
+import './style.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import slideDesk1 from '../../assets/slide-1-desk.jpg';
 import slideDesk2 from '../../assets/slide-2-desk.jpg';

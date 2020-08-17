@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ${setFontFace(`Roboto`, `Roboto-Regular`, `normal`, `normal`)}
-  ${setFontFace(`Work-Sans`, `WorkSans-Bold`, `normal`, `normal`)}
+  ${setFontFace(`Work-Sans`, `WorkSans-Bold`, `bold`, `normal`)}
   ${setFontFace(`Roboto`, `Roboto-Medium`, 500, `normal`)}
   ${setFontFace(`Roboto`, `Roboto-Bold`, `bold`, `normal`)}
 

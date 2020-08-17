@@ -78,7 +78,7 @@ export const Logo = styled.div`
     sans-serif;
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: .07rem;
+  letter-spacing: .05rem;
   line-height: 23px;
   margin-right: 58px;
   position: relative;
@@ -87,9 +87,9 @@ export const Logo = styled.div`
   @media ${DEVICE.TABLET} {
     font-size: 18px;
     line-height: 21px;
-    margin-bottom: -5px;
-    margin-right: 64px;
-    padding-left: 34px;
+    margin-bottom: -7px;
+    margin-right: 67px;
+    padding-left: 33px;
   }
 
   @media ${DEVICE.MOBILE} {

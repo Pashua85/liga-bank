@@ -4,7 +4,7 @@ import {MAIN_FONT_COLOR, HOVER_FONT_COLOR, DEVICE} from '../../variables';
 
 export const Nav = styled.nav<{isOpen: boolean, state: string}>`
   @media ${DEVICE.TABLET} {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
   }
 
   @media ${DEVICE.MOBILE} {
@@ -49,6 +49,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled.a`
+  font-family: 'Roboto', sans-serif;
   display: inline-block;
   color: ${MAIN_FONT_COLOR};
   text-decoration: none;
@@ -62,7 +63,7 @@ export const NavLink = styled.a`
   }
 
   @media ${DEVICE.TABLET} {
-    font-size: 13.5px;
+    font-size: 14px;
     line-height: 16px;
   }
 
