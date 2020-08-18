@@ -18,6 +18,24 @@
   }
 }
 
+.slide-carousel img {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.slide-carousel .carousel-item:nth-child(1) {
+  background-color: #2C36F2;
+  background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
+}
+
+.slide-carousel .carousel-item:nth-child(2) {
+  background: linear-gradient(135deg, #DDE2EC, #DDE2EC 40%, #F6FCFF 83%, #F6FCFF);
+}
+
+.slide-carousel .carousel-item:nth-child(3) {
+  background-color: #E6F1FE;
+}
+
 .slide-carousel .carousel-indicators li {
   background-color: #2028B6;
   border-bottom: 0;

@@ -17,13 +17,14 @@ const SlideCarousel: FunctionComponent = () => {
   const [index, setIndex] = useState(0);
   const {width} = useViewport();
 
+
   const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
 
   return (
     <div className="slide-carousel">
-      <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={null} fade={false} pause={false} defaultActiveIndex={0}>
         <Carousel.Item>
           <img
             className="d-block w-100"
