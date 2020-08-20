@@ -1,3 +1,7 @@
+.slide-carousel {
+  margin-bottom: 60px;
+}
+
 .slide-carousel .carousel-control-prev  {
   display: none;
 }
@@ -80,6 +84,10 @@
   padding: 0;
   padding-left: 63px;
 
+  @media screen and (min-width: 1920px) {
+    left: 19.61%;
+  }
+
   @media screen and (max-width: 1023px) {
     bottom: 25.3333333%;
     padding-left: 0;
@@ -88,7 +96,8 @@
 
   @media screen and (max-width: 767px) {
     bottom: 21.239%;
-    left: 4.685%;
+    left: 50%;
+    margin-left: -145px;
   }
 }
 
