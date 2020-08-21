@@ -1,5 +1,7 @@
 import React, {FunctionComponent, useState} from 'react';
-import {Container, Nav, NavItem, Title, Text, VaultIcon, CardsIcon, SecurityIcon, PhoneIcon} from './style';
+import {Container, Nav, NavItem, Title, TitleText, VaultIcon, CardsIcon, SecurityIcon, PhoneIcon,
+Card, CardImage, CardItem, CardLink, CardList, CardText, CardColumn} from './style';
+import piggyBank from '../../assets/piggybank.jpg';
 
 export type ServiceTitle = `Вклады` | `Кредиты` | `Страхование` | `Онлайн-сервисы`;
 
@@ -73,12 +75,26 @@ const DesktopServices: FunctionComponent = () => {
                   s.serviceTitle === `Онлайн-сервисы` &&
                   <PhoneIcon />
                 }
-                <Text>{s.serviceTitle}</Text>
+                <TitleText>{s.serviceTitle}</TitleText>
               </Title>
             </NavItem>
           ))
         }
       </Nav>
+      <Card activeService={activeService}>
+        <CardColumn>
+          <CardText>
+            Вклады Лига Банка – это выгодная инвестиция в свое будущее
+          </CardText>
+          <CardList>
+            <CardItem>Проценты по вкладам до 7%</CardItem>
+            <CardItem>Разнообразные условия</CardItem>
+            <CardItem>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</CardItem>
+          </CardList>
+          <CardLink href="/">Узнать подробнее</CardLink>
+        </CardColumn>
+        <CardImage imageUrl={piggyBank} />
+      </Card>
     </Container>
   );
 };
