@@ -90,7 +90,7 @@ export const TitleText = styled.span`
   line-height: 18px;
 `;
 
-export const Card = styled.div<{activeService: ServiceTitle}>`
+export const Card = styled.div`
   background-color: #F6F7FF;
   display: flex;
   justify-content: space-between;
@@ -179,7 +179,7 @@ export const CardLink = styled.a`
   }
 `;
 
-export const CardImage = styled.div<{imageUrl: string}>`
+export const CardImage = styled.div<{imageUrl: string, activeService?: ServiceTitle}>`
   background-image: ${({imageUrl}) => `url(${imageUrl})`};
   height: 290px;
   width: 440px;

@@ -3,6 +3,7 @@ import {Container, Nav, NavItem, Title, TitleText, VaultIcon, CardsIcon, Securit
   Card, CardImage, CardItem, CardLink, CardList, CardText, CardColumn, CardDetailLink, CardDetails} from './style';
 import piggyBank from '../../assets/piggybank.jpg';
 import car from '../../assets/car.jpg';
+import lock from '../../assets/lock.jpg';
 
 export type ServiceTitle = `Вклады` | `Кредиты` | `Страхование` | `Онлайн-сервисы`;
 
@@ -56,7 +57,7 @@ const DesktopServices: FunctionComponent = () => {
   const renderCards = (activeServiceParam: ServiceTitle): React.ReactNode | null => {
     if (activeServiceParam === `Вклады`) {
       return (
-        <Card activeService={activeService}>
+        <Card>
           <CardColumn activeService={activeService}>
             <CardText>
               Вклады Лига Банка – это выгодная инвестиция в свое будущее
@@ -73,7 +74,7 @@ const DesktopServices: FunctionComponent = () => {
       );
     } else if (activeServiceParam === `Кредиты`) {
       return (
-        <Card activeService={activeService}>
+        <Card>
           <CardColumn activeService={activeService}>
             <CardText>Лига Банк выдает кредиты<br/> под любые цели</CardText>
             <CardList activeService={activeService}>
@@ -86,6 +87,21 @@ const DesktopServices: FunctionComponent = () => {
             </CardDetails>
           </CardColumn>
           <CardImage imageUrl={car} />
+        </Card>
+      );
+    } else if (activeServiceParam === `Страхование`) {
+      return (
+        <Card>
+          <CardColumn activeService={activeService}>
+            <CardText>Лига Страхование — застрахуем все что захотите</CardText>
+            <CardList activeService={activeService}>
+              <CardItem>Автомобильное страхование</CardItem>
+              <CardItem>Страхование жизни и здоровья</CardItem>
+              <CardItem>Страхование недвижимости</CardItem>
+            </CardList>
+            <CardLink href="/">Узнать подробнее</CardLink>
+          </CardColumn>
+          <CardImage activeService={activeService} imageUrl={lock} />
         </Card>
       );
     } else {
