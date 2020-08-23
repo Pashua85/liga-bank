@@ -5,7 +5,7 @@ import cards from '../../assets/cards.svg';
 import security from '../../assets/security.svg';
 import phone from '../../assets/phone.svg';
 import itemIcon from '../../assets/item-icon.svg';
-import {HOVER_FONT_COLOR} from '../../variables';
+import {HOVER_FONT_COLOR, MAIN_FONT_COLOR} from '../../variables';
 
 export const Container = styled.div`
   max-width: 1645px;
@@ -94,17 +94,21 @@ export const Card = styled.div<{activeService: ServiceTitle}>`
   background-color: #F6F7FF;
   display: flex;
   justify-content: space-between;
-  padding: ${({activeService}) => {
-    if (activeService === `Вклады`) {
-      return `60px 11.5385% 60px 5.893%`;
-    } else {
-      return `60px 11.5385% 60px 5.893%`;
-    }
-  }}
+  align-items: center;
+  padding-left: 5.8974%;
+  padding-right: 11.538%;
 `;
 
-export const CardColumn = styled.div`
+export const CardColumn = styled.div<{activeService: ServiceTitle}>`
   width: 41.45%;
+  margin-bottom: ${({activeService}) => {
+    if (activeService === `Кредиты`) {
+      return `54px`;
+    } else {
+      return `60px`;
+    }
+  }};
+  margin-top: 60px;
 `;
 
 export const CardText = styled.p`
@@ -117,8 +121,14 @@ export const CardText = styled.p`
   padding-left: 1px;
 `;
 
-export const CardList = styled.ul`
-  margin-bottom: 35px;
+export const CardList = styled.ul<{activeService: ServiceTitle}>`
+  margin-bottom: ${({activeService}) => {
+    if (activeService === `Кредиты`) {
+      return `29px`;
+    } else {
+      return `35px`;
+    }
+  }};
 `;
 
 export const CardItem = styled.li`
@@ -173,5 +183,17 @@ export const CardImage = styled.div<{imageUrl: string}>`
   background-image: ${({imageUrl}) => `url(${imageUrl})`};
   height: 290px;
   width: 440px;
+`;
+
+export const CardDetails = styled.p`
+  line-height: 140%;
+  margin: 0;
+  padding-left: 1px;
+`;
+
+export const CardDetailLink = styled.a`
+  color: ${MAIN_FONT_COLOR};
+  font-weight: 500;
+  text-decoration: underline;
 `;
 
