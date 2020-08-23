@@ -4,6 +4,7 @@ import {Container, Nav, NavItem, Title, TitleText, VaultIcon, CardsIcon, Securit
 import piggyBank from '../../assets/piggybank.jpg';
 import car from '../../assets/car.jpg';
 import lock from '../../assets/lock.jpg';
+import phone from '../../assets/phone.jpg';
 
 export type ServiceTitle = `Вклады` | `Кредиты` | `Страхование` | `Онлайн-сервисы`;
 
@@ -57,7 +58,7 @@ const DesktopServices: FunctionComponent = () => {
   const renderCards = (activeServiceParam: ServiceTitle): React.ReactNode | null => {
     if (activeServiceParam === `Вклады`) {
       return (
-        <Card>
+        <Card >
           <CardColumn activeService={activeService}>
             <CardText>
               Вклады Лига Банка – это выгодная инвестиция в свое будущее
@@ -101,7 +102,21 @@ const DesktopServices: FunctionComponent = () => {
             </CardList>
             <CardLink href="/">Узнать подробнее</CardLink>
           </CardColumn>
-          <CardImage activeService={activeService} imageUrl={lock} />
+          <CardImage imageUrl={lock} />
+        </Card>
+      );
+    } else if (activeServiceParam === `Онлайн-сервисы`) {
+      return (
+        <Card>
+          <CardColumn activeService={activeService}>
+            <CardText>Лига Банк — это огромное количество онлайн-сервисов для вашего удобства</CardText>
+            <CardList activeService={activeService}>
+              <CardItem>Мобильный банк,<br/> который всегда под рукой</CardItem>
+              <CardItem>Приложение Лига-проездной позволит<br/> вам оплачивать билеты по всему миру</CardItem>
+            </CardList>
+            <CardLink href="/">Узнать подробнее</CardLink>
+          </CardColumn>
+          <CardImage imageUrl={phone} />
         </Card>
       );
     } else {

@@ -11,6 +11,7 @@ export const Container = styled.div`
   max-width: 1645px;
   margin: 0 auto;
   margin-bottom: 200px;
+  min-height: 503px;
   width: 85.652%;
 `;
 
@@ -95,12 +96,19 @@ export const Card = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all .5s;
   padding-left: 5.8974%;
   padding-right: 11.538%;
 `;
 
 export const CardColumn = styled.div<{activeService: ServiceTitle}>`
-  width: 41.45%;
+  width: ${({activeService}) => {
+    if (activeService === `Онлайн-сервисы`) {
+      return `43%`;
+    } else {
+      return `41.45%`;
+    }
+  }};
   margin-bottom: ${({activeService}) => {
     if (activeService === `Кредиты`) {
       return `54px`;
