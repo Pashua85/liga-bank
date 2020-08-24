@@ -92,8 +92,8 @@ const Slider: FunctionComponent<SliderProps> = ({slides}) => {
     >
       <SliderContainer>
         <SliderContent
-          translate={translate}
-          transition={transition}
+          translateNumber={translate}
+          transitionNumber={transition}
         >
           {
             _slides.map((slide, i) => (

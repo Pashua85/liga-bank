@@ -7,9 +7,9 @@ export const SliderContainer = styled.div`
   overflow: hidden;
 `;
 
-export const SliderContent = styled.div<{translate: number, transition: number}>`
-  transform: ${({translate}) => `translateX(-${translate}%)`};
-  transition: ${({transition}) => `transform ease-out ${transition}s`};
+export const SliderContent = styled.div<{translateNumber: number, transitionNumber: number}>`
+  transform: ${({translateNumber}) => `translateX(-${translateNumber}%)`};
+  transition: ${({transitionNumber}) => `transform ease-out ${transitionNumber}s`};
   height: 100%;
   width: 400%;
   display: flex;
