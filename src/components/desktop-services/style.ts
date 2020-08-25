@@ -130,6 +130,7 @@ export const CardText = styled.p`
 `;
 
 export const CardList = styled.ul<{activeService: ServiceTitle}>`
+  list-style: none;
   margin-bottom: ${({activeService}) => {
     if (activeService === `Кредиты`) {
       return `29px`;
@@ -142,7 +143,6 @@ export const CardList = styled.ul<{activeService: ServiceTitle}>`
 export const CardItem = styled.li`
   font-size: 17.8px;
   line-height: 130%;
-  list-style: none;
   letter-spacing: .1px;
   padding-left: 22px;
   position: relative;

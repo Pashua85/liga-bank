@@ -1,10 +1,10 @@
 import React, {FunctionComponent, useState} from 'react';
 import {Container, Nav, NavItem, Title, TitleText, VaultIcon, CardsIcon, SecurityIcon, PhoneIcon,
   Card, CardImage, CardItem, CardLink, CardList, CardText, CardColumn, CardDetailLink, CardDetails} from './style';
-import piggyBank from '../../assets/piggybank.jpg';
-import car from '../../assets/car.jpg';
-import lock from '../../assets/lock.jpg';
-import phone from '../../assets/phone.jpg';
+import piggyBank from '../../assets/piggybank-desk.jpg';
+import car from '../../assets/car-desk.jpg';
+import lock from '../../assets/lock-desk.jpg';
+import phone from '../../assets/phone-desk.jpg';
 
 export type ServiceTitle = `Вклады` | `Кредиты` | `Страхование` | `Онлайн-сервисы`;
 

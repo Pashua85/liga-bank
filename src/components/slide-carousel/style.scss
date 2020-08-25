@@ -1,5 +1,9 @@
 .slide-carousel {
   margin-bottom: 60px;
+
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 0;
+  }
 }
 
 .slide-carousel .carousel-control-prev  {

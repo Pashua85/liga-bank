@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-import {MAIN_FONT_COLOR} from '../../variables';
+import {MAIN_FONT_COLOR, DEVICE} from '../../variables';
 import {setFontFace} from '../../assets/setFontFace';
 
 export const GlobalStyles = createGlobalStyle`
@@ -28,5 +28,10 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @media ${DEVICE.TABLET} {
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 `;
