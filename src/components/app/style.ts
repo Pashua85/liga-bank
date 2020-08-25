@@ -33,5 +33,10 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 16px;
       line-height: 140%;
     }
+
+    @media ${DEVICE.MOBILE} {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 `;

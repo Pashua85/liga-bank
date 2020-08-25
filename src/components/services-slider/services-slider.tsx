@@ -28,7 +28,7 @@ const ServicesSlider = () => {
           <ListItem>Разнообразные условия</ListItem>
           <ListItem>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</ListItem>
         </List>
-        <Button>Узнать подробнее</Button>
+        <Button>Рассчитать кредит</Button>
       </Column>
       <Image imageUrl={chooseSrc(width, {
         deskSrc: piggyBankDesk,
@@ -70,7 +70,7 @@ const ServicesSlider = () => {
     </Slide>,
     <Slide>
       <Column>
-        <Title>Лига Банк — это огромное количество онлайн-сервисов для вашего удобства</Title>
+        <Title service={`online`}>Лига Банк — это огромное количество онлайн-сервисов для вашего удобства</Title>
         <List service={`online`}>
           <ListItem>Мобильный банк,<br/> который всегда под рукой</ListItem>
           <ListItem>Приложение Лига-проездной позволит вам оплачивать билеты по всему миру</ListItem>
