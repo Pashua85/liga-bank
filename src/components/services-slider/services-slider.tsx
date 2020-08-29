@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {FunctionComponent, useState, useEffect} from 'react';
+import './style.scss';
 import Slider from '../slider/slider';
 import {Slide, Title, List, ListItem, Button, Text, Link, Column, Image} from './style';
 import {useViewport} from '../../hooks/useViewport';
@@ -16,9 +17,21 @@ import phoneDesk from '../../assets/phone-desk.jpg';
 import phoneTab from '../../assets/phone-tab.jpg';
 import phonePhone from '../../assets/phone-phone.jpg';
 
+const ServicesSlider: FunctionComponent = () => {
+  const [width, setWidth] = useState(window.innerWidth);
 
-const ServicesSlider = () => {
-  const {width} = useViewport();
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener(`resize`, handleResize);
+    return () => {
+      window.removeEventListener(`resize`, handleResize);
+    };
+  });
+
+
   const slides = [
     <Slide>
       <Column>
@@ -86,7 +99,7 @@ const ServicesSlider = () => {
   ];
 
   return (
-    <Slider slides={slides} />
+    <Slider slides={slides} dotClass="service-dot" activeDotClass="service-dot--active" dotsContainerClass="service-dots-container" />
   );
 };
 

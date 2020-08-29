@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SliderContainer = styled.div`
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: relative;
   width: 100%;
   overflow: hidden;

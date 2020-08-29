@@ -1,0 +1,41 @@
+.service-dots-container {
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;;
+  margin-left: -27px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  width: 56px;
+
+  @media screen and (max-width: 767px) {
+    bottom: 10px;
+    height: 6px;
+    margin-left: -21px;
+    width: 42px;
+  }
+}
+
+.service-dot {
+  background-color: #2028B6;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+
+  @media screen and (max-width: 767px) {
+    height: 6px;
+    width: 6px;
+  }
+}
+
+.service-dot--active {
+  background-color: #E0E0E0;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+
+  @media screen and (max-width: 767px) {
+    height: 6px;
+    width: 6px;
+  }
+}

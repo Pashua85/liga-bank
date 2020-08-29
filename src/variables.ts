@@ -13,3 +13,9 @@ export const BREAKPOINTS = {
   MOBILE: 767,
   TAB: 1023
 };
+
+export const CONTENT_WIDTH = {
+  DESK: `85.652%`,
+  TAB: `88.28%`,
+  MOBILE: `90.63%`
+};

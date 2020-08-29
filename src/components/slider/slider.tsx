@@ -3,10 +3,13 @@ import {Swipeable} from 'react-swipeable';
 import {SliderContainer, SliderContent, Slide} from './style';
 
 interface SliderProps {
-  slides: React.ReactNode[]
+  slides: React.ReactNode[],
+  dotClass: string,
+  activeDotClass: string,
+  dotsContainerClass: string
 }
 
-const Slider: FunctionComponent<SliderProps> = ({slides}) => {
+const Slider: FunctionComponent<SliderProps> = ({slides, dotClass, activeDotClass, dotsContainerClass}) => {
   const lastSlide = slides[slides.length - 1];
   const firstSlide = slides[0];
   const secondSlide = slides[1];
@@ -103,6 +106,17 @@ const Slider: FunctionComponent<SliderProps> = ({slides}) => {
             ))
           }
         </SliderContent>
+        <div className={dotsContainerClass}>
+          {
+            slides.map((s: React.ReactNode, i: number): React.ReactNode => {
+              if (activeSlide === i) {
+                return <div className={activeDotClass}></div>;
+              } else {
+                return <div className={dotClass}></div>;
+              }
+            })
+          }
+        </div>
       </SliderContainer>
     </Swipeable>
   );

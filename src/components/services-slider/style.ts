@@ -88,7 +88,11 @@ export const ListItem = styled.li`
   }
 
   &:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+
+    @media ${DEVICE.MOBILE} {
+      margin-bottom: 12px;
+    }
   }
 
   &:before {
@@ -165,5 +169,3 @@ export const Image = styled.div<{imageUrl: string}>`
     width: 87px;
   }
 `;
-
-
