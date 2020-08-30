@@ -6,10 +6,11 @@ interface FieldProps {
   title: string,
   min: number,
   max: number,
-  onValidChange: (newValue: number) => void
+  onValidChange: (newValue: number) => void,
+  items: string
 }
 
-const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, onValidChange}) => {
+const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, onValidChange, items}) => {
   const [inputValue, setInputValue] = useState(value);
 
   useEffect(() => {
@@ -17,9 +18,10 @@ const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, 
   }, [value]);
 
   const handleInputChange = (e: React.SyntheticEvent) => {
-    setInputValue(parseInt((e.target as HTMLInputElement).value, 10));
-    if (parseInt((e.target as HTMLInputElement).value, 10) >= min) {
-      onValidChange(parseInt((e.target as HTMLInputElement).value, 10));
+    const newValue = parseInt((e.target as HTMLInputElement).value, 10);
+    setInputValue(newValue);
+    if ((newValue >= min) && (newValue <= max)) {
+      onValidChange(newValue);
     }
   };
 
@@ -44,7 +46,7 @@ const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, 
             onChange={handleInputChange}
             onBlur={handleBlur}
           />
-          <Span>рублей</Span>
+          <Span>{items}</Span>
         </InnerField>
       </Field>
     </Container>

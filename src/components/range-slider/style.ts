@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  outline: 1px solid red;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 40px;
 `;
 
 export const RangeInput = styled.input`
@@ -21,10 +20,12 @@ export const RangeInput = styled.input`
     background-color: #2C36F2;
     border-radius: 50%;
     cursor: pointer;
+    position: relative;
     margin-top: -6.5px;
     height: 14px;
     width: 14px;
   }
+
 
   &::-moz-range-thumb {
     background-color: #2C36F2;
@@ -55,3 +56,14 @@ export const RangeInput = styled.input`
     width: 100%;
   }
 `;
+
+export const Label = styled.div<{place: string}>`
+  position: absolute;
+  color: #707C87;
+  font-size: 14px;
+  left: ${({place}) => place === `start` ? `0` : ``};
+  right: ${({place}) => place === `end` ? `0` : ``};
+  line-height: 20px;
+  top: 30px;
+`;
+

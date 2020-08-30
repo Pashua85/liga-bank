@@ -13,6 +13,7 @@ const Calculator: FunctionComponent = () => {
   const [initPayment, setInitPayment] = useState(0);
   const [minInitPayment, setMinInitPayment] = useState(0);
   const [initPercent, setInitPercent] = useState(0);
+  const [termInYears, setTermInYears] = useState(0);
 
   useEffect(() => {
     if (calculatorType === `Ипотечное кредитование`) {
@@ -20,6 +21,7 @@ const Calculator: FunctionComponent = () => {
       setInitPayment(200000);
       setInitPayment(200000);
       setInitPercent(10);
+      setTermInYears(5);
     }
   }, [calculatorType]);
 
@@ -49,6 +51,10 @@ const Calculator: FunctionComponent = () => {
 
   const handleItitPersentChange = (newPecent: number) => {
     setInitPayment(Math.round(value / 100 * newPecent));
+  };
+
+  const handleTermChange = (newTerm: number) => {
+    setTermInYears(newTerm);
   };
 
   return (
@@ -83,6 +89,7 @@ const Calculator: FunctionComponent = () => {
                 min={minInitPayment}
                 max={value}
                 onValidChange={handleInitPaymentChange}
+                items="рублей"
               />
               <RangeSlider
                 value={initPercent}
@@ -90,6 +97,25 @@ const Calculator: FunctionComponent = () => {
                 max={100}
                 step={1}
                 onChange={handleItitPersentChange}
+                hasBorders={false}
+                items="%"
+              />
+              <FieldComponent
+                value={termInYears}
+                title="Срок кредитования"
+                min={5}
+                max={30}
+                onValidChange={handleTermChange}
+                items="лет"
+              />
+              <RangeSlider
+                value={termInYears}
+                min={5}
+                max={30}
+                step={1}
+                onChange={handleTermChange}
+                hasBorders={true}
+                items="лет"
               />
             </React.Fragment>
           }
