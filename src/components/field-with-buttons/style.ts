@@ -3,9 +3,14 @@ import plus from '../../assets/plus.svg';
 import minus from '../../assets/minus.svg';
 
 export const Container = styled.div`
+  margin-bottom: 30px;
 `;
 
 export const Title = styled.h4`
+  color: #394959;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
 `;
 
 export const Field = styled.div<{errorMessage: string}>`
@@ -16,7 +21,6 @@ export const Field = styled.div<{errorMessage: string}>`
   display: flex;
   justify-content: center;
   height: 60px;
-  margin-bottom: 40px;
   position: relative;
   user-select: none;
 `;
@@ -64,6 +68,10 @@ export const ErrorSpan = styled.span`
 `;
 
 export const Button = styled.div<{name: string, isDisabled: boolean}>`
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   border: 4px solid white;
   border-radius: 50%;
   box-sizing: content-box;
@@ -102,4 +110,10 @@ export const Button = styled.div<{name: string, isDisabled: boolean}>`
     width: 100%;
     height: 100%;
   }
+`;
+
+export const Subtitle = styled.div`
+  color: #707C87;
+  font-size: 14px;
+  line-height: 20px;
 `;

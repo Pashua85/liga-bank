@@ -1,5 +1,5 @@
-import React, {FunctionComponent, useState} from 'react';
-import {Container, Title, Field, Input, Span, ErrorSpan, InnerField, Button} from './style';
+import React, {FunctionComponent, useState, useEffect} from 'react';
+import {Container, Title, Field, Input, Span, ErrorSpan, InnerField, Button, Subtitle} from './style';
 
 interface FieldWithButtonsProps {
   value: number,
@@ -13,6 +13,10 @@ interface FieldWithButtonsProps {
 const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minValue, maxValue, title, onValidChange, step}) => {
   const [inputValue, setInputValue] = useState(value);
   const [errorMessage, setErrorMessage] = useState(``);
+
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
 
   const validate = (valueNumber: number): boolean => {
     if (valueNumber >= minValue && valueNumber <= maxValue) {
@@ -52,9 +56,10 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
 
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(parseInt(event.target.value, 10));
-    if (validate(parseInt(event.target.value, 10))) {
-      onValidChange(parseInt(event.target.value, 10));
+    const newValue = parseInt(event.target.value.trim(), 10);
+    setInputValue(newValue);
+    if (validate(newValue)) {
+      onValidChange(newValue);
       setErrorMessage(``);
     } else {
       setErrorMessage(`Некорректное значение`);
@@ -69,6 +74,7 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
         <InnerField>
           <Input
             type="number"
+            lang="en-150"
             value={inputValue}
             onChange={handleInputChange}
             min={minValue}
@@ -79,6 +85,7 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
         <ErrorSpan>{errorMessage}</ErrorSpan>
         <Button name="increase" isDisabled={inputValue >= maxValue} onClick={handleIncreaseClick} />
       </Field>
+      <Subtitle>{`От ${minValue.toLocaleString()} до ${maxValue.toLocaleString()} рублей`}</Subtitle>
     </Container>
   );
 };
