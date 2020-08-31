@@ -4,6 +4,7 @@ import SelectField from '../select-field/select-field';
 import FieldWithButtons from '../field-with-buttons/field-with-buttons';
 import FieldComponent from '../field-component/field-component';
 import RangeSlider from '../range-slider/range-slider';
+import CheckboxField from '../checkbox-field/checkbox-field';
 
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
@@ -14,6 +15,8 @@ const Calculator: FunctionComponent = () => {
   const [minInitPayment, setMinInitPayment] = useState(0);
   const [initPercent, setInitPercent] = useState(0);
   const [termInYears, setTermInYears] = useState(0);
+  const [maternalCapital, setMaternalCapital] = useState(false);
+  const [loanAmount, setLoanAmount] = useState(0);
 
   useEffect(() => {
     if (calculatorType === `Ипотечное кредитование`) {
@@ -22,6 +25,7 @@ const Calculator: FunctionComponent = () => {
       setInitPayment(200000);
       setInitPercent(10);
       setTermInYears(5);
+      setMaternalCapital(true);
     }
   }, [calculatorType]);
 
@@ -41,6 +45,16 @@ const Calculator: FunctionComponent = () => {
     }
   }, [initPayment, value]);
 
+  useEffect(() => {
+    if (calculatorType === `Ипотечное кредитование`) {
+      if (maternalCapital) {
+        setLoanAmount(value - initPayment - 470000);
+      } else {
+        setLoanAmount(value - initPayment);
+      }
+    }
+  }, [calculatorType, maternalCapital, value, initPayment]);
+
   const handleValueChange = (newValue: number) => {
     setValue(newValue);
   };
@@ -55,6 +69,10 @@ const Calculator: FunctionComponent = () => {
 
   const handleTermChange = (newTerm: number) => {
     setTermInYears(newTerm);
+  };
+
+  const handleMaternalCapitalChange = (newIsChecked: boolean) => {
+    setMaternalCapital(newIsChecked);
   };
 
   return (
@@ -116,6 +134,11 @@ const Calculator: FunctionComponent = () => {
                 onChange={handleTermChange}
                 hasBorders={true}
                 items="лет"
+              />
+              <CheckboxField
+                isChecked={maternalCapital}
+                onChange={handleMaternalCapitalChange}
+                label="Использовать материнский капитал"
               />
             </React.Fragment>
           }
