@@ -5,6 +5,7 @@ import FieldWithButtons from '../field-with-buttons/field-with-buttons';
 import FieldComponent from '../field-component/field-component';
 import RangeSlider from '../range-slider/range-slider';
 import CheckboxField from '../checkbox-field/checkbox-field';
+import OfferError from '../offer-error/offer-error';
 
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
@@ -17,6 +18,9 @@ const Calculator: FunctionComponent = () => {
   const [termInYears, setTermInYears] = useState(0);
   const [maternalCapital, setMaternalCapital] = useState(false);
   const [loanAmount, setLoanAmount] = useState(0);
+  const [minLoanAmount, setMinLoanAmount] = useState(0);
+  const [isAmountCorrect, setIsAmmountCorrect] = useState(true);
+  const [amountError, setAmountError] = useState(``);
 
   useEffect(() => {
     if (calculatorType === `Ипотечное кредитование`) {
@@ -26,6 +30,8 @@ const Calculator: FunctionComponent = () => {
       setInitPercent(10);
       setTermInYears(5);
       setMaternalCapital(true);
+      setMinLoanAmount(500000);
+      setIsAmmountCorrect(true);
     }
   }, [calculatorType]);
 
@@ -54,6 +60,17 @@ const Calculator: FunctionComponent = () => {
       }
     }
   }, [calculatorType, maternalCapital, value, initPayment]);
+
+  useEffect(() => {
+    setIsAmmountCorrect(loanAmount >= minLoanAmount);
+    if (calculatorType === `Ипотечное кредитование`) {
+      if (loanAmount >= minLoanAmount) {
+        setAmountError(``);
+      } else {
+        setAmountError(`Наш банк не выдаёт ипотечные кредиты меньше 500 000 рублей.`);
+      }
+    }
+  }, [calculatorType, loanAmount, minLoanAmount]);
 
   const handleValueChange = (newValue: number) => {
     setValue(newValue);
@@ -143,6 +160,12 @@ const Calculator: FunctionComponent = () => {
             </React.Fragment>
           }
         </Column>
+        {
+          calculatorType !== null && !isAmountCorrect &&
+          <OfferError
+            title={amountError}
+          />
+        }
       </Row>
     </Container>
   );

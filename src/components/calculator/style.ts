@@ -15,6 +15,7 @@ export const Header = styled.h2`
 
 export const Row = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 
 export const Column = styled.div`
