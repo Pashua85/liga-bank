@@ -1,6 +1,7 @@
 import React, {FunctionComponent, useState} from 'react';
 import isEmail from 'validator/es/lib/isEmail';
-import {Form, Header, List, Item, ItemLabel, ItemValue, InputGroup, Input, InputField, Button, ErrorSpan} from './style';
+import {Form, Header, List, Item, ItemLabel, ItemValue, InputGroup, Input, InputField, Button, ErrorSpan,
+  MessageBackground, MessageCard, MessageTitle, MessageText, CloseButton} from './style';
 import {CalculatorType} from '../calculator/calculator';
 
 interface RequestFormProps {
@@ -8,16 +9,18 @@ interface RequestFormProps {
   calculatorType: CalculatorType,
   value: number,
   initPayment: number,
-  termInYears: number
+  termInYears: number,
+  onFormSubmit: () => void,
 }
 
-const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calculatorType, value, initPayment, termInYears}) => {
+const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calculatorType, value, initPayment, termInYears, onFormSubmit}) => {
   const [name, setName] = useState(``);
   const [phone, setPhone] = useState(``);
   const [email, setEmail] = useState(``);
   const [nameError, setNameError] = useState(``);
   const [phoneError, setPhoneError] = useState(``);
   const [emailError, setEmailError] = useState(``);
+  const [isMessageShown, setIsMessageShown] = useState(false);
 
   const validate = (): boolean => {
     if (name.length === 0) {
@@ -56,10 +59,13 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
   const handleFormSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (validate()) {
-      console.log(`Form submit`);
-    } else {
-      console.log(`Something wrong`);
+      setIsMessageShown(true);
     }
+  };
+
+  const handleCloseClick = () => {
+    setIsMessageShown(false);
+    onFormSubmit();
   };
 
   let typeString; let valueLabel;
@@ -137,6 +143,16 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
       <Button>
         Отправить
       </Button>
+      {
+        isMessageShown &&
+        <MessageBackground>
+          <MessageCard>
+            <MessageTitle>Спасибо за обращение в наш банк.</MessageTitle>
+            <MessageText>Наш менеджер скоро свяжется с вами<br/> по указанному номеру телефона.</MessageText>
+            <CloseButton onClick={handleCloseClick} />
+          </MessageCard>
+        </MessageBackground>
+      }
     </Form>
   );
 };

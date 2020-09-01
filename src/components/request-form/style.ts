@@ -88,7 +88,7 @@ export const ErrorSpan = styled.span`
   left: 24px;
   letter-spacing: .1px;
   position: absolute;
-  font-size: 8px;
+  font-size: 9px;
   text-transform: uppercase;
   color: red;
 `;
@@ -115,6 +115,71 @@ export const Button = styled.button`
   &:active {
     outline: none;
     filter: none;
+  }
+`;
+
+export const MessageBackground = styled.div`
+  background-color: rgba(255, 255, 255, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+`;
+
+export const MessageCard = styled.div`
+  background-color: #F6F7FF;
+  border-radius: 4px;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -97px;
+  position: fixed;
+  padding-top: 52px;
+  padding-bottom: 57px;
+  top: 50%;
+  width: 500px;
+`;
+
+export const MessageTitle = styled.p`
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 31px;
+  text-align: center;
+`;
+
+export const MessageText = styled.p`
+  color: #394959;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+`;
+
+export const CloseButton = styled.div`
+  cursor: pointer;
+  height: 16px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 16px;
+
+  &:before,
+  &:after {
+    background-color: #1F1E25;
+    content: '';
+    height: 2px;
+    left: -3.3px;
+    top: 7px;
+    position: absolute;
+    width: 22.6px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
   }
 `;
 

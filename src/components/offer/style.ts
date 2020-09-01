@@ -43,7 +43,7 @@ export const Label = styled.div`
   line-height: 22px;
 `;
 
-export const Button = styled.a`
+export const Button = styled.a<{onClick: () => void}>`
   background-color: #2C36F2;
   border-radius: 4px;
   color: #F6F7FF;

@@ -7,10 +7,11 @@ interface OfferProps {
   loanAmount: number,
   interestRate: number,
   monthPayment: number,
-  minSalary: number
+  minSalary: number,
+  onClick: () => void
 }
 
-const Offer: FunctionComponent<OfferProps> = ({type, loanAmount, interestRate, monthPayment, minSalary}) => {
+const Offer: FunctionComponent<OfferProps> = ({type, loanAmount, interestRate, monthPayment, minSalary, onClick}) => {
   const loanAmountLabel = type === `Ипотечное кредитование` ? `Сумма ипотеки` : `Сумма кредита`;
   const percent = interestRate.toFixed(2).replace(`.`, `,`);
 
@@ -35,7 +36,7 @@ const Offer: FunctionComponent<OfferProps> = ({type, loanAmount, interestRate, m
           <Label>Необходимый доход</Label>
         </Item>
       </Content>
-      <Button>Оформить заявку</Button>
+      <Button onClick={onClick}>Оформить заявку</Button>
     </Container>
   );
 };

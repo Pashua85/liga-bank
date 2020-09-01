@@ -29,7 +29,7 @@ const Calculator: FunctionComponent = () => {
   const [insuranse, setInsuranse] = useState(false);
   const [casco, setCasco] = useState(false);
   const [salaryProject, setSalaryProject] = useState(false);
-  const [isFormShown, setIsFormShown] = useState(true);
+  const [isFormShown, setIsFormShown] = useState(false);
   const [requestNumber, setRequestNumber] = useState(1);
 
   useEffect(() => {
@@ -161,6 +161,8 @@ const Calculator: FunctionComponent = () => {
     setMinSalary(Math.round(monthPayment / 0.45));
   }, [monthPayment]);
 
+ 
+
   const handleValueChange = (newValue: number) => {
     setValue(newValue);
   };
@@ -191,6 +193,11 @@ const Calculator: FunctionComponent = () => {
 
   const handleSalaryProjectChange = (newIsChecked: boolean) => {
     setSalaryProject(newIsChecked);
+  };
+
+  const handleFormSubmit = () => {
+    setRequestNumber(requestNumber + 1);
+    setIsFormShown(false);
   };
 
   return (
@@ -377,6 +384,7 @@ const Calculator: FunctionComponent = () => {
             interestRate={interestRate}
             monthPayment={monthPayment}
             minSalary={minSalary}
+            onClick={() => setIsFormShown(true)}
           />
         }
       </Row>
@@ -388,6 +396,7 @@ const Calculator: FunctionComponent = () => {
           value={value}
           initPayment={initPayment}
           termInYears={termInYears}
+          onFormSubmit={handleFormSubmit}
         />
       }
     </Container>

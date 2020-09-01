@@ -128,8 +128,8 @@ const DesktopServices: FunctionComponent = () => {
     <Container>
       <Nav>
         {
-          services.map((s) => (
-            <NavItem isActive={s.isActive} onClick={() => handleClick(s.serviceTitle)}>
+          services.map((s, i) => (
+            <NavItem isActive={s.isActive} onClick={() => handleClick(s.serviceTitle)} key={i}>
               <Title service={s.serviceTitle}>
                 {
                   s.serviceTitle === `Вклады` &&

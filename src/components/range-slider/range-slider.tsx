@@ -19,7 +19,7 @@ const RangeSlider: FunctionComponent<RangeSliderProps> = ({value, min, max, step
 
   return (
     <Container>
-      <RangeInput type="range" min={min} max={max} value={value} step={step} onInput={handleSlide} />
+      <RangeInput type="range" min={min} max={max} value={value} step={step} onInput={handleSlide} onChange={() => {}} />
       {
         !hasBorders &&
         <Label place="start">{`${value}${items}`}</Label>
