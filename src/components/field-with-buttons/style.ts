@@ -3,7 +3,7 @@ import plus from '../../assets/plus.svg';
 import minus from '../../assets/minus.svg';
 
 export const Container = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 
 export const Title = styled.h4`
@@ -11,6 +11,7 @@ export const Title = styled.h4`
   font-size: 16px;
   font-weight: normal;
   line-height: 22px;
+  margin-bottom: 9px;
 `;
 
 export const Field = styled.div<{errorMessage: string}>`
@@ -20,6 +21,7 @@ export const Field = styled.div<{errorMessage: string}>`
   border-radius: 4px;
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
   height: 60px;
   position: relative;
   user-select: none;
@@ -85,12 +87,13 @@ export const Button = styled.div<{name: string, isDisabled: boolean}>`
 
   &[name="increase"] {
     background-image: url(${plus});
-    margin-right: 20px;
+    margin-right: 19px;
   }
 
   &[name="decrease"] {
     background-image: url(${minus});
-    margin-left: 20px;
+    margin-left: 19px;
+    margin-top: -2px;
   }
 
   &:hover {

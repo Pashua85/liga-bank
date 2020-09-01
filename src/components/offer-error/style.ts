@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: #F6F7FF;
-  padding-left: 58px;
+  margin-top: 8px;
+  padding-left: 52px;
   padding-top: 60px;
   padding-bottom: 60px;
   width: 500px;
@@ -14,7 +15,7 @@ export const Title = styled.p`
   font-size: 22px;
   line-height: 31px;
   margin-bottom: 25px;
-  width: 355px;
+  width: 370px;
 `;
 
 export const Subtitle = styled.p`

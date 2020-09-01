@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-  margin-bottom: 40px;
 `;
 
 export const RangeInput = styled.input`
@@ -64,6 +63,6 @@ export const Label = styled.div<{place: string}>`
   left: ${({place}) => place === `start` ? `0` : ``};
   right: ${({place}) => place === `end` ? `0` : ``};
   line-height: 20px;
-  top: 30px;
+  top: 28px;
 `;
 

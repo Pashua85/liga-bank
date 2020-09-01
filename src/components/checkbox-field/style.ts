@@ -19,7 +19,7 @@ export const Label = styled.label`
 export const Text = styled.div`
   font-size: 16px;
   line-height: 22px;
-  padding-left: 29px;
+  padding-left: 24px;
   position: relative;
 
   &:before {

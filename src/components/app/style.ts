@@ -17,6 +17,8 @@ export const GlobalStyles = createGlobalStyle`
   ${setFontFace(`Roboto`, `Roboto-Bold`, `bold`, `normal`)}
 
   body {
+    padding-bottom: 200px;
+
     box-sizing: border-box;
     color: ${MAIN_FONT_COLOR};
     height: 100%;

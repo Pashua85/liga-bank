@@ -85,7 +85,7 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
         <ErrorSpan>{errorMessage}</ErrorSpan>
         <Button name="increase" isDisabled={inputValue >= maxValue} onClick={handleIncreaseClick} />
       </Field>
-      <Subtitle>{`От ${minValue.toLocaleString()} до ${maxValue.toLocaleString()} рублей`}</Subtitle>
+      <Subtitle>{`От ${minValue.toLocaleString()}\u00A0\u00A0до ${maxValue.toLocaleString()} рублей`}</Subtitle>
     </Container>
   );
 };

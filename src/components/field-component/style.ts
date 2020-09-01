@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 `;
 
 export const Title = styled.h4`
@@ -9,6 +9,7 @@ export const Title = styled.h4`
   font-size: 16px;
   font-weight: normal;
   line-height: 22px;
+  margin-bottom: 9px;
 `;
 
 export const Field = styled.div`

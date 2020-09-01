@@ -10,7 +10,7 @@ import {HOVER_FONT_COLOR, MAIN_FONT_COLOR} from '../../variables';
 export const Container = styled.div`
   max-width: 1645px;
   margin: 0 auto;
-  margin-bottom: 200px;
+  margin-bottom: 97px;
   min-height: 503px;
   width: 85.652%;
 `;

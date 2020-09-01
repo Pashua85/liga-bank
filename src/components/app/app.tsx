@@ -9,9 +9,9 @@ const App: FunctionComponent = () => {
   return (
     <div>
       <GlobalStyles />
-      {/* <Header />
+      <Header />
       <SlideCarousel />
-      <Services /> */}
+      <Services />
       <Calculator />
     </div>
   );

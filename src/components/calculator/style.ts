@@ -9,22 +9,26 @@ export const Container = styled.div`
 
 export const Header = styled.h2`
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   font-size: 41px;
   line-height: 57px;
+  margin-bottom: 48px;
 `;
 
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 59px;
 `;
 
 export const Column = styled.div`
   width: 51.28%;
 `;
 
-export const SectionHeader = styled.h3`
+export const SectionHeader = styled.h3<{name?: string}>`
   font-size: 22px;
   line-height: 31px;
+  margin-bottom: ${({name}) => name === `step-2` ? `17px` : `22px`};
 `;
 
 export const Select = styled.select`
@@ -32,4 +36,9 @@ export const Select = styled.select`
   height: 60px;
   line-height: 60px;
   vertical-align: middle;
+`;
+
+export const RangeWrapper = styled.div<{name?: string}>`
+  margin-top: ${({name}) => name === `years` ? `-4px` : ``};
+  margin-bottom: 45px;
 `;
