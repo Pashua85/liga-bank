@@ -15,6 +15,13 @@ export const Container = styled.div`
     padding-top: 53px;
     width: 100%;
   }
+
+  @media ${DEVICE.MOBILE} {
+    padding-left: 5.17%;
+    padding-top: 34px;
+    padding-right: 5.17%;
+    padding-bottom: 40px;
+  }
 `;
 
 export const Header = styled.h3`
@@ -22,6 +29,12 @@ export const Header = styled.h3`
   font-weight: 500;
   line-height: 31px;
   margin-bottom: 24px;
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 23px;
+  }
 `;
 
 export const Content = styled.div`
@@ -33,6 +46,11 @@ export const Content = styled.div`
   @media ${DEVICE.TABLET} {
     justify-content: flex-start;
     margin-bottom: 8px;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    flex-direction: column;
+    margin-bottom: 16px;
   }
   
 `;
@@ -51,6 +69,11 @@ export const Item = styled.div`
   &:nth-child(3) {
     margin-right: 62px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    margin-right: 0;
+    margin-bottom: 13px;
+  }
 `;
 
 export const ValueNumber = styled.div`
@@ -58,9 +81,16 @@ export const ValueNumber = styled.div`
   font-weight: 500;
   line-height: 31px;
   margin-bottom: 2px;
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 1px;
+  }
 `;
 
 export const Label = styled.div`
+  color: #394959;
   font-size: 15.9px;
   line-height: 22px;
 `;
@@ -89,6 +119,10 @@ export const Button = styled.a<{onClick: () => void}>`
 
   &:active {
     filter: none;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 14px;
   }
 `;
 

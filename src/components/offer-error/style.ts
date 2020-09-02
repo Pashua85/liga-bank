@@ -13,6 +13,12 @@ export const Container = styled.div`
   @media ${DEVICE.TABLET} {
     width: 100%;
   }
+
+  @media ${DEVICE.MOBILE} {
+    padding-left: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 `;
 
 export const Title = styled.p`
@@ -21,6 +27,12 @@ export const Title = styled.p`
   line-height: 31px;
   margin-bottom: 25px;
   width: 370px;
+
+  @media ${DEVICE.MOBILE} {
+    width: 77%;
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -29,4 +41,8 @@ export const Subtitle = styled.p`
   line-height: 22px;
   margin-bottom: 0;
   width: 260px;
+
+  @media ${DEVICE.MOBILE} {
+    width: auto;
+  }
 `;

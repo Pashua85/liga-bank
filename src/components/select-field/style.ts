@@ -26,12 +26,20 @@ export const Field = styled.div<{isOpen: boolean, state: string}>`
     top: 24px;
     right: 22px;
     width: 18px;
+
+    @media ${DEVICE.MOBILE} {
+      right: 13px;
+    }
   }
 
   @media ${DEVICE.TABLET} {
     margin-bottom: 34px;
   }
 
+  @media ${DEVICE.MOBILE} {
+    padding-left: 14px;
+    margin-bottom: 25px;
+  }
 `;
 
 export const List = styled.ul<{isOpen: boolean}>`

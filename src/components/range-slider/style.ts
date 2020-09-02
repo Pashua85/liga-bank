@@ -69,5 +69,9 @@ export const Label = styled.div<{place: string}>`
   @media ${DEVICE.TABLET} {
     top: 26px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    top: 25px;
+  }
 `;
 

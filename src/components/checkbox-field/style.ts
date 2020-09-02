@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {DEVICE} from '../../variables';
 import checkboxEmpty from '../../assets/checkbox-empty.svg';
 import checkboxChecked from '../../assets/checkbox-checked.svg';
 
@@ -36,8 +37,18 @@ export const Text = styled.div`
     top: 50%;
     width: 16px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 
 export const TextSpan = styled.div`
   margin-bottom: -2px;
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 0;
+  }
+
 `;

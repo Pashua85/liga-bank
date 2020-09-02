@@ -7,6 +7,10 @@ export const Container = styled.div`
   @media ${DEVICE.TABLET} {
     margin-bottom: 6px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 7px;
+  }
 `;
 
 export const Title = styled.h4`

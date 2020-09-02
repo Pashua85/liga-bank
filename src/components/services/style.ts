@@ -7,4 +7,8 @@ export const Container = styled.div`
   @media ${DEVICE.TABLET} {
     margin-bottom: 69px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 53px;
+  }
 `;

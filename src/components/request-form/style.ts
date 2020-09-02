@@ -32,6 +32,12 @@ export const Header = styled.h3`
     line-height: 25px;
     margin-bottom: 27px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 19px;
+  }
 `;
 
 export const List = styled.ul`
@@ -47,6 +53,13 @@ export const Item = styled.li`
   display: flex;
   justify-content: space-between;
   min-height: 55px;
+
+  @media ${DEVICE.MOBILE} {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    justify-content: center;
+    min-height: 76px;
+  }
 `;
 
 export const ItemLabel = styled.span`
@@ -54,12 +67,25 @@ export const ItemLabel = styled.span`
   font-size: 16px;
   line-height: 22px;
   margin-bottom: -1px;
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 16px;
+    line-height: 22px;
+     margin-bottom: 0;
+  }
+
 `;
 
 export const ItemValue = styled.span`
   font-weight: 500;
   font-size: 22px;
   line-height: 31px;
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 1px;
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 
 export const InputGroup = styled.div`
@@ -75,14 +101,26 @@ export const InputField = styled.div<{name: string}>`
 
   &:not(:last-child) {
     margin-bottom: 30px;
+
+    @media ${DEVICE.TABLET} {
+      margin-bottom: 20px;
+    }
   }
 
   &:last-child {
     margin-bottom: 40px;
+
+    @media ${DEVICE.TABLET} {
+      margin-bottom: 30px;
+    }
   }
 
   @media ${DEVICE.TABLET} {
     width: ${({name}) => name === `fullname` ? `100%` : `47.8%`};
+  }
+
+  @media ${DEVICE.MOBILE} {
+    width: 100%;
   }
 `;
 
@@ -105,6 +143,12 @@ export const Input = styled.input<{name: string}>`
 
   @media ${DEVICE.TABLET} {
     padding-left: 23px;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 14px;
   }
 `;
 
@@ -145,6 +189,10 @@ export const Button = styled.button`
   @media ${DEVICE.TABLET} {
     width: 100%;
   }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 14px;
+  }
 `;
 
 export const MessageBackground = styled.div`
@@ -172,6 +220,13 @@ export const MessageCard = styled.div`
     width: ${CONTENT_WIDTH.TAB};
     left: 5.86%;
   }
+
+  @media ${DEVICE.MOBILE} {
+    padding-top: 35px;
+    padding-bottom: 38px;
+    left: 4.685%;
+    width: ${CONTENT_WIDTH.MOBILE};
+  }
 `;
 
 export const MessageTitle = styled.p`
@@ -179,6 +234,13 @@ export const MessageTitle = styled.p`
   font-weight: 500;
   line-height: 31px;
   text-align: center;
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 18px;
+    line-height: 25px;
+    width: 70%;
+    margin: 0 auto 20px;
+  }
 `;
 
 export const MessageText = styled.p`
@@ -186,6 +248,12 @@ export const MessageText = styled.p`
   text-align: center;
   font-size: 16px;
   line-height: 22px;
+  margin: 0 auto;
+  width: 300px;
+
+  @media ${DEVICE.MOBILE} {
+    width: 82.75%;
+  }
 `;
 
 export const CloseButton = styled.div`
@@ -196,6 +264,13 @@ export const CloseButton = styled.div`
   right: 25px;
   width: 16px;
 
+  @media ${DEVICE.MOBILE} {
+    height: 12px;
+    width: 12px;
+    top: 15px;
+    right: 15px;
+  }
+
   &:before,
   &:after {
     background-color: #1F1E25;
@@ -205,6 +280,12 @@ export const CloseButton = styled.div`
     top: 7px;
     position: absolute;
     width: 22.6px;
+
+    @media ${DEVICE.MOBILE} {
+      left: -2.5px;
+      top: 5px;
+      width: 17px;
+    }
   }
 
   &:before {

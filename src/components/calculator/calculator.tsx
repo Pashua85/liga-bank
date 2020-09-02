@@ -29,7 +29,7 @@ const Calculator: FunctionComponent = () => {
   const [insuranse, setInsuranse] = useState(false);
   const [casco, setCasco] = useState(false);
   const [salaryProject, setSalaryProject] = useState(false);
-  const [isFormShown, setIsFormShown] = useState(false);
+  const [isFormShown, setIsFormShown] = useState(true);
   const [requestNumber, setRequestNumber] = useState(1);
 
   useEffect(() => {

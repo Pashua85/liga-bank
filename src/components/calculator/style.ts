@@ -9,6 +9,11 @@ export const Container = styled.div`
   @media ${DEVICE.TABLET} {
     width: ${CONTENT_WIDTH.TAB};
   }
+
+  @media ${DEVICE.MOBILE} {
+    width: ${CONTENT_WIDTH.MOBILE};
+  }
+
 `;
 
 export const Header = styled.h2`
@@ -23,6 +28,12 @@ export const Header = styled.h2`
     line-height: 45px;
     margin-bottom: 27px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 22px;
+  }
 `;
 
 export const Row = styled.div`
@@ -34,6 +45,10 @@ export const Row = styled.div`
   @media ${DEVICE.TABLET} {
     margin-bottom: 54px;
   }
+  
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 43px;
+  }
 `;
 
 export const Column = styled.div`
@@ -43,6 +58,11 @@ export const Column = styled.div`
     width: 100%;
     margin-bottom: 25px;
   }
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 14px;
+  }
+
 `;
 
 export const SectionHeader = styled.h3<{name?: string}>`
@@ -55,13 +75,12 @@ export const SectionHeader = styled.h3<{name?: string}>`
     line-height: 25px;
     margin-bottom: ${({name}) => name === `step-2` ? `14px` : `19px`}
   }  
-`;
 
-export const Select = styled.select`
-  border-radius: 4px;
-  height: 60px;
-  line-height: 60px;
-  vertical-align: middle;
+  @media ${DEVICE.MOBILE} {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: ${({name}) => name === `step-2` ? `9px` : `14px`}
+  }
 `;
 
 export const RangeWrapper = styled.div<{name?: string}>`
@@ -70,5 +89,9 @@ export const RangeWrapper = styled.div<{name?: string}>`
 
   @media ${DEVICE.TABLET} {
     margin-bottom: ${({name}) => name === `years` ? `42px` : `39px`};
+  }
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: ${({name}) => name === `years` ? `38px` : `35px`};
   }
 `;
