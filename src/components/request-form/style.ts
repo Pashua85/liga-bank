@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {DEVICE, CONTENT_WIDTH} from '../../variables';
 
 export const Form = styled.form`
   background-color: #F6F7FF;
@@ -8,6 +9,15 @@ export const Form = styled.form`
   padding-right: 70px;
   padding-bottom: 70px;
   width: 770px;
+
+  @media ${DEVICE.TABLET} {
+    background-color: transparent;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
 `;
 
 export const Header = styled.h3`
@@ -16,6 +26,12 @@ export const Header = styled.h3`
   line-height: 31px;
   text-align: center;
   margin-bottom: 12px;
+
+  @media ${DEVICE.TABLET} {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 27px;
+  }
 `;
 
 export const List = styled.ul`
@@ -64,6 +80,10 @@ export const InputField = styled.div<{name: string}>`
   &:last-child {
     margin-bottom: 40px;
   }
+
+  @media ${DEVICE.TABLET} {
+    width: ${({name}) => name === `fullname` ? `100%` : `47.8%`};
+  }
 `;
 
 export const Input = styled.input<{name: string}>`
@@ -73,6 +93,7 @@ export const Input = styled.input<{name: string}>`
   font-size: 18px;
   height: 60px;
   line-height: 60px;
+  letter-spacing: 0.03em;
   padding-left: 24px;
   width: 100%;
   vertical-align: middle;
@@ -80,6 +101,10 @@ export const Input = styled.input<{name: string}>`
   &:focus {
     outline: none;
     background-color: transparent;
+  }
+
+  @media ${DEVICE.TABLET} {
+    padding-left: 23px;
   }
 `;
 
@@ -116,6 +141,10 @@ export const Button = styled.button`
     outline: none;
     filter: none;
   }
+
+  @media ${DEVICE.TABLET} {
+    width: 100%;
+  }
 `;
 
 export const MessageBackground = styled.div`
@@ -131,14 +160,18 @@ export const MessageBackground = styled.div`
 export const MessageCard = styled.div`
   background-color: #F6F7FF;
   border-radius: 4px;
-  left: 50%;
-  margin-left: -250px;
+  left: calc(50% - 250px);
   margin-top: -97px;
   position: fixed;
   padding-top: 52px;
   padding-bottom: 57px;
   top: 50%;
   width: 500px;
+
+  @media ${DEVICE.TABLET} {
+    width: ${CONTENT_WIDTH.TAB};
+    left: 5.86%;
+  }
 `;
 
 export const MessageTitle = styled.p`

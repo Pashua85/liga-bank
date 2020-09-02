@@ -143,7 +143,7 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
       <Button>
         Отправить
       </Button>
-      {/* {
+      {
         isMessageShown &&
         <MessageBackground>
           <MessageCard>
@@ -152,7 +152,7 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
             <CloseButton onClick={handleCloseClick} />
           </MessageCard>
         </MessageBackground>
-      } */}
+      }
     </Form>
   );
 };

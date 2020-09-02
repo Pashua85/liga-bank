@@ -30,7 +30,10 @@ export const Row = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 60px;
-
+  
+  @media ${DEVICE.TABLET} {
+    margin-bottom: 54px;
+  }
 `;
 
 export const Column = styled.div`
