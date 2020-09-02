@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import {Wrapper, Checkbox, Label, Text} from './style';
+import {Wrapper, Checkbox, Label, Text, TextSpan} from './style';
 
 interface CheckboxFieldProps {
   isChecked: boolean,
@@ -16,7 +16,9 @@ const CheckboxField: FunctionComponent<CheckboxFieldProps> = ({isChecked, onChan
     <Wrapper>
       <Label>
         <Checkbox type="checkbox" checked={isChecked} onChange={handleChange} />
-        <Text>{label}</Text>
+        <Text>
+          <TextSpan>{label}</TextSpan>
+        </Text>
       </Label>
     </Wrapper>
   );

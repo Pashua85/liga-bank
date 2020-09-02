@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 import plus from '../../assets/plus.svg';
 import minus from '../../assets/minus.svg';
+import {DEVICE} from '../../variables';
 
 export const Container = styled.div`
   margin-bottom: 20px;
+
+  @media ${DEVICE.TABLET} {
+    margin-bottom: 15px;
+  }
 `;
 
 export const Title = styled.h4`

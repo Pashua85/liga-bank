@@ -9,6 +9,7 @@ export const SliderContainer = styled.div`
 `;
 
 export const SliderContent = styled.div<{translateNumber: number, transitionNumber: number}>`
+  will-change: transform;
   transform: ${({translateNumber}) => `translateX(-${translateNumber}%)`};
   transition: ${({transitionNumber}) => `transform ease-out ${transitionNumber}s`};
   height: 100%;

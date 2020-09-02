@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {DEVICE} from '../../variables';
 
 export const Container = styled.div`
   position: relative;
@@ -64,5 +65,9 @@ export const Label = styled.div<{place: string}>`
   right: ${({place}) => place === `end` ? `0` : ``};
   line-height: 20px;
   top: 28px;
+
+  @media ${DEVICE.TABLET} {
+    top: 26px;
+  }
 `;
 

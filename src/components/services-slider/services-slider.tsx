@@ -41,7 +41,7 @@ const ServicesSlider: FunctionComponent = () => {
           <ListItem>Разнообразные условия</ListItem>
           <ListItem>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</ListItem>
         </List>
-        <Button>Рассчитать кредит</Button>
+        <Button>Узнать подробнее</Button>
       </Column>
       <Image imageUrl={chooseSrc(width, {
         deskSrc: piggyBankDesk,

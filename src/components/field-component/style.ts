@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import {DEVICE} from '../../variables';
 
 export const Container = styled.div`
   margin-bottom: 4px;
+
+  @media ${DEVICE.TABLET} {
+    margin-bottom: 6px;
+  }
 `;
 
 export const Title = styled.h4`

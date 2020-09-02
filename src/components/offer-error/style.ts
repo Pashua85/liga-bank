@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {DEVICE} from '../../variables';
 
 export const Container = styled.div`
   background-color: #F6F7FF;
@@ -8,6 +9,10 @@ export const Container = styled.div`
   padding-bottom: 60px;
   width: 500px;
   height: fit-content;
+
+  @media ${DEVICE.TABLET} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.p`

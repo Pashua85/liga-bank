@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import icon from '../../assets/select-icon.svg';
+import {DEVICE} from '../../variables';
 
 export const Field = styled.div<{isOpen: boolean, state: string}>`
   border: 1px solid #1F1E25;
@@ -26,6 +27,11 @@ export const Field = styled.div<{isOpen: boolean, state: string}>`
     right: 22px;
     width: 18px;
   }
+
+  @media ${DEVICE.TABLET} {
+    margin-bottom: 34px;
+  }
+
 `;
 
 export const List = styled.ul<{isOpen: boolean}>`

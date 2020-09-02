@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {DEVICE} from '../../variables';
 
 export const Container = styled.div`
   background-color: #F6F7FF;
@@ -7,8 +8,13 @@ export const Container = styled.div`
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 60px;
-  width: 500px;
+  width: 42.735%;
   height: fit-content;
+
+  @media ${DEVICE.TABLET} {
+    padding-top: 53px;
+    width: 100%;
+  }
 `;
 
 export const Header = styled.h3`
@@ -23,12 +29,28 @@ export const Content = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 10px;
+
+  @media ${DEVICE.TABLET} {
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+  
 `;
 
 export const Item = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
+  margin-right: 10px;
+
+  @media ${DEVICE.TABLET} {
+    margin-right: 50px;
+    margin-bottom: 26px;
+  }
+
+  &:nth-child(3) {
+    margin-right: 62px;
+  }
 `;
 
 export const ValueNumber = styled.div`

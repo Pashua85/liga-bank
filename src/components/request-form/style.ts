@@ -105,7 +105,7 @@ export const Button = styled.button`
   line-height: 51px;
   height: 51px;
   margin: 0 auto;
-  width: 190px;
+  width: 198px;
   user-select: none;
 
   &:hover {
@@ -119,7 +119,7 @@ export const Button = styled.button`
 `;
 
 export const MessageBackground = styled.div`
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, .9);
   position: fixed;
   top: 0;
   left: 0;

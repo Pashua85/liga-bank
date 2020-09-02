@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import checkboxEmpty from '../../assets/checkbox-empty.svg';
 import checkboxChecked from '../../assets/checkbox-checked.svg';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+`;
 
 export const Checkbox = styled.input`
   display: none;
@@ -17,6 +18,7 @@ export const Label = styled.label`
 `;
 
 export const Text = styled.div`
+  display: flex;
   font-size: 16px;
   line-height: 22px;
   padding-left: 24px;
@@ -34,4 +36,8 @@ export const Text = styled.div`
     top: 50%;
     width: 16px;
   }
+`;
+
+export const TextSpan = styled.div`
+  margin-bottom: -2px;
 `;
