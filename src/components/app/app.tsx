@@ -4,6 +4,7 @@ import Header from '../header/header';
 import SlideCarousel from '../slide-carousel/slide-carousel';
 import Services from '../services/services';
 import Calculator from '../calculator/calculator';
+import Departments from '../departments/departments';
 
 const App: FunctionComponent = () => {
   return (
@@ -13,6 +14,7 @@ const App: FunctionComponent = () => {
       <SlideCarousel />
       <Services />
       <Calculator />
+      <Departments />
     </div>
   );
 };

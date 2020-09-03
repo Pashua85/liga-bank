@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import icon from '../../assets/select-icon.svg';
 import {DEVICE} from '../../variables';
 
-export const Field = styled.div<{isOpen: boolean, state: string}>`
+export const Field = styled.div<{isOpen: boolean, state: string, isChosen: boolean}>`
   border: 1px solid #1F1E25;
   border-radius: ${({isOpen}) => isOpen ? `4px 4px 0 0` : `4px 4px 4px 4px`};
   font-size: 16px;
   font-weight: 500;
   height: 60px;
   line-height: 60px;
-  margin-bottom: 33px;
+  margin-bottom: ${({isChosen}) => isChosen ? `33px` : ``};
   padding-left: 23px;
   position: relative;
   user-select: none;
@@ -33,12 +33,12 @@ export const Field = styled.div<{isOpen: boolean, state: string}>`
   }
 
   @media ${DEVICE.TABLET} {
-    margin-bottom: 34px;
+    margin-bottom: ${({isChosen}) => isChosen ? `34px` : ``};
   }
 
   @media ${DEVICE.MOBILE} {
     padding-left: 14px;
-    margin-bottom: 25px;
+    margin-bottom: ${({isChosen}) => isChosen ? `25px` : ``};
   }
 `;
 

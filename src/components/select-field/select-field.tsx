@@ -7,9 +7,10 @@ interface SelectFieldProps {
   options: CalculatorType[],
   value: CalculatorType,
   onChange: (value: CalculatorType) => void
+  isChosen: boolean
 }
 
-const SelectField: FunctionComponent<SelectFieldProps> = ({options, value, onChange}) => {
+const SelectField: FunctionComponent<SelectFieldProps> = ({options, value, onChange, isChosen}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleItemClick = (op: CalculatorType, e: React.SyntheticEvent): void => {
@@ -27,7 +28,7 @@ const SelectField: FunctionComponent<SelectFieldProps> = ({options, value, onCha
   return (
     <Transition in={isOpen} timeout={200}>
       {(state: string) => (
-        <Field isOpen={isOpen} onClick={handleFieldClick} state={state}>
+        <Field isOpen={isOpen} onClick={handleFieldClick} state={state} isChosen={isChosen}>
           {
             value === null ?
               `Выберите цель кредита` :

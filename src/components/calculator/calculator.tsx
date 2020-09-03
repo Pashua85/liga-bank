@@ -12,7 +12,7 @@ import RequestForm from '../request-form/request-form';
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
 const Calculator: FunctionComponent = () => {
-  const [calculatorType, setCalculatorType] = useState<CalculatorType>(`Ипотечное кредитование`);
+  const [calculatorType, setCalculatorType] = useState<CalculatorType>(null);
   const [value, setValue] = useState(0);
   const [initPayment, setInitPayment] = useState(0);
   const [minInitPayment, setMinInitPayment] = useState(0);
@@ -29,7 +29,7 @@ const Calculator: FunctionComponent = () => {
   const [insuranse, setInsuranse] = useState(false);
   const [casco, setCasco] = useState(false);
   const [salaryProject, setSalaryProject] = useState(false);
-  const [isFormShown, setIsFormShown] = useState(true);
+  const [isFormShown, setIsFormShown] = useState(false);
   const [requestNumber, setRequestNumber] = useState(1);
 
   useEffect(() => {
@@ -161,8 +161,6 @@ const Calculator: FunctionComponent = () => {
     setMinSalary(Math.round(monthPayment / 0.45));
   }, [monthPayment]);
 
- 
-
   const handleValueChange = (newValue: number) => {
     setValue(newValue);
   };
@@ -203,13 +201,14 @@ const Calculator: FunctionComponent = () => {
   return (
     <Container>
       <Header>Кредитный калькулятор</Header>
-      <Row>
+      <Row isFormShown={isFormShown}>
         <Column>
           <SectionHeader>Шаг 1. Цель кредита</SectionHeader>
           <SelectField
             options={[`Ипотечное кредитование`, `Автомобильное кредитование`, `Потребительский кредит`]}
             value={calculatorType}
             onChange={setCalculatorType}
+            isChosen={calculatorType !== null}
           />
           {
             calculatorType !== null &&

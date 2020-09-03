@@ -3,9 +3,6 @@ import {DEVICE} from '../../variables';
 import checkboxEmpty from '../../assets/checkbox-empty.svg';
 import checkboxChecked from '../../assets/checkbox-checked.svg';
 
-export const Wrapper = styled.div`
-`;
-
 export const Checkbox = styled.input`
   display: none;
 
@@ -18,9 +15,9 @@ export const Label = styled.label`
   user-select: none;
 `;
 
-export const Text = styled.div`
+export const Text = styled.div<{textSize?: string}>`
   display: flex;
-  font-size: 16px;
+  font-size: ${({textSize}) => textSize !== undefined ? `${textSize}px` : `16px`};
   line-height: 22px;
   padding-left: 24px;
   position: relative;
@@ -44,8 +41,8 @@ export const Text = styled.div`
   }
 `;
 
-export const TextSpan = styled.div`
-  margin-bottom: -2px;
+export const TextSpan = styled.div<{textSize?: string}>`
+  margin-bottom: ${({textSize}) => textSize !== undefined ? `0` : `-2px`};
 
   @media ${DEVICE.MOBILE} {
     margin-bottom: 0;

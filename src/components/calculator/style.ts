@@ -3,6 +3,7 @@ import {CONTENT_WIDTH, DEVICE} from '../../variables';
 
 export const Container = styled.div`
   margin: 0 auto;
+  margin-bottom: 97px;
   max-width: 1645px;
   width: ${CONTENT_WIDTH.DESK};
 
@@ -36,18 +37,18 @@ export const Header = styled.h2`
   }
 `;
 
-export const Row = styled.div`
+export const Row = styled.div<{isFormShown: boolean}>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: ${({isFormShown}) => isFormShown ? `60px` : ``};
   
   @media ${DEVICE.TABLET} {
-    margin-bottom: 54px;
+    margin-bottom: ${({isFormShown}) => isFormShown ? `54px` : ``};
   }
   
   @media ${DEVICE.MOBILE} {
-    margin-bottom: 43px;
+    margin-bottom: ${({isFormShown}) => isFormShown ? `43px` : ``};
   }
 `;
 
