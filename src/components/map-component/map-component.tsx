@@ -1,11 +1,9 @@
 import React, {FunctionComponent} from 'react';
 
-
-
 const MapComponent: FunctionComponent = () => {
   return (
-
+    <div></div>
   );
 };
 
-export const MapComponent;
+export default MapComponent;
