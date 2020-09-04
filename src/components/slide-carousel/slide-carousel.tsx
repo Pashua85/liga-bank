@@ -24,7 +24,7 @@ const SlideCarousel: FunctionComponent = () => {
 
   return (
     <div className="slide-carousel">
-      <Carousel activeIndex={index} onSelect={handleSelect} interval={4000} fade={false} pause={false} defaultActiveIndex={0}>
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={null} fade={false} pause={false} defaultActiveIndex={0}>
         <Carousel.Item>
           <img
             className="d-block w-100"

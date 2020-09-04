@@ -9,10 +9,12 @@ export const Container = styled.div`
 
   @media ${DEVICE.TABLET} {
     width: ${CONTENT_WIDTH.TAB};
+    margin-bottom: 44px;
   }
 
   @media ${DEVICE.MOBILE} {
     width: ${CONTENT_WIDTH.MOBILE};
+    margin-bottom: 39px;
   }
 
 `;

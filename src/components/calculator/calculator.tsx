@@ -8,6 +8,7 @@ import CheckboxField from '../checkbox-field/checkbox-field';
 import OfferError from '../offer-error/offer-error';
 import Offer from '../offer/offer';
 import RequestForm from '../request-form/request-form';
+import { CheckboxWrapper } from '../departments/style';
 
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
@@ -319,16 +320,20 @@ const Calculator: FunctionComponent = () => {
                   items="лет"
                 />
               </RangeWrapper>
-              <CheckboxField
-                isChecked={casco}
-                onChange={handleCascoChange}
-                label="Оформить КАСКО в нашем банке"
-              />
-              <CheckboxField
-                isChecked={insuranse}
-                onChange={handleInsuranceChange}
-                label="Оформить Страхование жизни в нашем банке"
-              />
+              <CheckboxWrapper>
+                <CheckboxField
+                  isChecked={casco}
+                  onChange={handleCascoChange}
+                  label="Оформить КАСКО в нашем банке"
+                />
+              </CheckboxWrapper>
+              <CheckboxWrapper>
+                <CheckboxField
+                  isChecked={insuranse}
+                  onChange={handleInsuranceChange}
+                  label="Оформить Страхование жизни в нашем банке"
+                />
+              </CheckboxWrapper>
             </React.Fragment>
           }
           {

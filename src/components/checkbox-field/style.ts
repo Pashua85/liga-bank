@@ -20,7 +20,7 @@ export const Text = styled.div<{textSize?: string}>`
   display: flex;
   font-size: ${({textSize}) => textSize !== undefined ? `${textSize}px` : `16px`};
   line-height: 22px;
-  padding-left: 24px;
+  padding-left: ${({textSize}) => textSize !== undefined ? `26px` : `24px`};
   position: relative;
 
   &:before {

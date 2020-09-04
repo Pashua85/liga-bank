@@ -1,11 +1,46 @@
-import React, {FunctionComponent, useState} from 'react';
+import React, {FunctionComponent, useState, useEffect} from 'react';
 import {Container, Filters, CheckboxWrapper, Header} from './style';
 import CheckboxField from '../checkbox-field/checkbox-field';
+import MapComponent from '../map-component/map-component';
+import {citiesInRussia, citiesInCIS, citiesInEurope, ICity} from '../../data/cities';
+
+type Cities = ICity[]
 
 const Departments: FunctionComponent = () => {
-  const [inRussia, setInRussia] = useState(false);
+  const [inRussia, setInRussia] = useState(true);
   const [inCIS, setInCIS] = useState(false);
   const [inEurope, setInEurope] = useState(false);
+  const [cities, setCities] = useState<Cities>([]);
+
+  useEffect(() => {
+    if (inRussia) {
+      setCities((prevState) => [...prevState, ...citiesInRussia]);
+    } else {
+      setCities((prevState) => prevState.filter((city) => {
+        return city.region !== `Россия`;
+      }));
+    }
+  }, [inRussia]);
+
+  useEffect(() => {
+    if (inCIS) {
+      setCities((prevState) => [...prevState, ...citiesInCIS]);
+    } else {
+      setCities((prevState) => prevState.filter((city) => {
+        return city.region !== `СНГ`;
+      }));
+    }
+  }, [inCIS]);
+
+  useEffect(() => {
+    if (inEurope) {
+      setCities((prevState) => [...prevState, ...citiesInEurope]);
+    } else {
+      setCities((prevState) => prevState.filter((city) => {
+        return city.region !== `Европа`;
+      }));
+    }
+  }, [inEurope]);
 
   const handleInRussiaChange = (newIsChecked: boolean) => {
     setInRussia(newIsChecked);
@@ -48,6 +83,7 @@ const Departments: FunctionComponent = () => {
           />
         </CheckboxWrapper>
       </Filters>
+      <MapComponent cities={cities} />
     </Container>
   );
 };

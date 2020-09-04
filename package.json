@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/googlemaps": "^3.39.13",
     "@types/react-bootstrap": "0.32.22",
     "@types/react-transition-group": "4.4.0",
     "@types/styled-components": "^5.1.2",
