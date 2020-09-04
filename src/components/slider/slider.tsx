@@ -110,9 +110,9 @@ const Slider: FunctionComponent<SliderProps> = ({slides, dotClass, activeDotClas
           {
             slides.map((s: React.ReactNode, i: number): React.ReactNode => {
               if (activeSlide === i) {
-                return <div className={activeDotClass}></div>;
+                return <div className={activeDotClass} key={i}></div>;
               } else {
-                return <div className={dotClass}></div>;
+                return <div className={dotClass} key={i}></div>;
               }
             })
           }
