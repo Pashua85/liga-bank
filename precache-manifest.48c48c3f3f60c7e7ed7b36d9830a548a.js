@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67f765e36a9aca087f36bb8ba043e56a",
+    "revision": "4043a8f4cd15b259dd4ab6dbec59d45a",
     "url": "/liga-bank/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "48586dde0d88a730f8bd",
+    "revision": "0de7d9d2677a2f7bf393",
     "url": "/liga-bank/static/css/main.bb52cbf7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/js/2.6fdb1953.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "48586dde0d88a730f8bd",
-    "url": "/liga-bank/static/js/main.2b957512.chunk.js"
+    "revision": "0de7d9d2677a2f7bf393",
+    "url": "/liga-bank/static/js/main.00ae1ca0.chunk.js"
   },
   {
     "revision": "467e6a30de2769c04192",

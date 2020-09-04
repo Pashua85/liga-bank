@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/liga-bank/precache-manifest.9bbe848b1a9bdb4b904b8e6d3cd06d44.js"
+  "/liga-bank/precache-manifest.48c48c3f3f60c7e7ed7b36d9830a548a.js"
 );
 
 self.addEventListener('message', (event) => {
