@@ -28,8 +28,11 @@ export const Container = styled.div`
   }
 
   @media ${DEVICE.MOBILE} {
+    flex-direction: column;
+    justify-content: flex-start;
     min-height: 426px;
     width: ${CONTENT_WIDTH.MOBILE};
+    padding-top: 35px;
   }
 `;
 
@@ -43,6 +46,11 @@ export const Navigation = styled.div`
   @media ${DEVICE.TABLET} {
     align-items: flex-start;
     flex-wrap: nowrap;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    width: 100%;
+    margin-bottom: 20px;
   }
 `;
 
@@ -114,6 +122,10 @@ export const Address = styled.p`
     margin-top: 26px;
     order: 3;
   }
+
+  @media ${DEVICE.MOBILE} {
+    display: none;
+  }
 `;
 
 export const NavMenu = styled.nav`
@@ -126,6 +138,10 @@ export const NavMenu = styled.nav`
     align-self: flex-start;
     margin-top: 33px;
     order: 2;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    margin-top: 20px;
   }
 `;
 
@@ -143,6 +159,15 @@ export const NavLink = styled.a`
 
   &:not(:last-child) {
     margin-bottom: 9px;
+
+    @media ${DEVICE.MOBILE} {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 14px;
+    line-height: 20px;
   }
 `;
 
@@ -155,6 +180,10 @@ export const Contacts = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     width: 47.8%;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    width: 100%;
   }
 `;
 
@@ -178,9 +207,16 @@ export const ContactGroup = styled.div<{name: string}>`
     margin-bottom: 21px;
   }
 
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 16px;
+  }
+
   &:nth-child(2) {
     @media ${DEVICE.TABLET} {
       margin-bottom: 20px;
+    }
+    @media ${DEVICE.MOBILE} {
+      margin-bottom: 15px;
     }
   }
 
