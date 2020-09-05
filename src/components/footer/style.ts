@@ -39,6 +39,11 @@ export const Navigation = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 40.7%;
+
+  @media ${DEVICE.TABLET} {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
 `;
 
 export const Logo = styled.div`
@@ -83,9 +88,9 @@ export const Logo = styled.div`
     @media ${DEVICE.TABLET} {
       background-image: url(${logoImg});
       background-image: contain;
-      bottom: 2px;
+      bottom: 3px;
       height: 24px;
-      left: 0;
+      left: -1px;
       width: 26px;
     }
 
@@ -104,6 +109,11 @@ export const Address = styled.p`
   margin-top: 13px;
   order: 2;
   width: 260px;
+
+  @media ${DEVICE.TABLET} {
+    margin-top: 26px;
+    order: 3;
+  }
 `;
 
 export const NavMenu = styled.nav`
@@ -111,6 +121,12 @@ export const NavMenu = styled.nav`
   flex-direction: column;
   align-self: flex-end;
   order: 3;
+
+  @media ${DEVICE.TABLET} {
+    align-self: flex-start;
+    margin-top: 33px;
+    order: 2;
+  }
 `;
 
 export const NavLink = styled.a`
@@ -134,6 +150,12 @@ export const Contacts = styled.div`
   display: flex;
   justify-content: space-between;
   width: 52.27%;
+
+  @media ${DEVICE.TABLET} {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 47.8%;
+  }
 `;
 
 export const ContactGroup = styled.div<{name: string}>`
@@ -151,6 +173,22 @@ export const ContactGroup = styled.div<{name: string}>`
     position: absolute;
     width: ${({name}) => name === `sms` ? `10px` : `16px`};
   }
+
+  @media ${DEVICE.TABLET} {
+    margin-bottom: 21px;
+  }
+
+  &:nth-child(2) {
+    @media ${DEVICE.TABLET} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &:nth-child(2):before {
+    @media ${DEVICE.TABLET} {
+      top: 4px;
+    }
+  }
 `;
 
 export const ContactNumber = styled.a`
@@ -162,6 +200,10 @@ export const ContactNumber = styled.a`
 
   &:hover {
     color: ${MAIN_FONT_COLOR}
+  }
+
+  @media ${DEVICE.TABLET} {
+    padding-top: 1px;
   }
 `;
 
@@ -229,6 +271,10 @@ export const SocialLink = styled.a<{name: SocialName}>`
 
   &:not(:last-child) {
     margin-right: 15px;
+
+    @media ${DEVICE.TABLET} {
+      margin-right: 20px;
+    }
   }
 
   &:hover:after {

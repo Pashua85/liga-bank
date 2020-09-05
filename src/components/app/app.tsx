@@ -16,7 +16,7 @@ const App: FunctionComponent = () => {
       <Services />
       <Calculator />
       <Departments />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
