@@ -7,6 +7,7 @@ import Calculator from '../calculator/calculator';
 import Departments from '../departments/departments';
 import Footer from '../footer/footer';
 
+
 const App: FunctionComponent = () => {
   return (
     <div>
