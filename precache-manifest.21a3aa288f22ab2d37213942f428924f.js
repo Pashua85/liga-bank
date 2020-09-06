@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4043a8f4cd15b259dd4ab6dbec59d45a",
+    "revision": "e0b898d5297116633dd730fdb3eb1474",
     "url": "/liga-bank/index.html"
   },
   {
-    "revision": "31b3cc7129c9aaeeda8d",
+    "revision": "bde47dee95b11cff1cbf",
     "url": "/liga-bank/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "0de7d9d2677a2f7bf393",
+    "revision": "46822c439479e1de26f6",
     "url": "/liga-bank/static/css/main.bb52cbf7.chunk.css"
   },
   {
-    "revision": "31b3cc7129c9aaeeda8d",
-    "url": "/liga-bank/static/js/2.6fdb1953.chunk.js"
+    "revision": "bde47dee95b11cff1cbf",
+    "url": "/liga-bank/static/js/2.3a0eaebe.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/liga-bank/static/js/2.6fdb1953.chunk.js.LICENSE.txt"
+    "url": "/liga-bank/static/js/2.3a0eaebe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0de7d9d2677a2f7bf393",
-    "url": "/liga-bank/static/js/main.00ae1ca0.chunk.js"
+    "revision": "46822c439479e1de26f6",
+    "url": "/liga-bank/static/js/main.a1da2107.chunk.js"
   },
   {
     "revision": "467e6a30de2769c04192",
@@ -120,6 +120,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/enter.9580394c.svg"
   },
   {
+    "revision": "41bf1cc964250f71f1f30295511e2132",
+    "url": "/liga-bank/static/media/facebook-icon.41bf1cc9.svg"
+  },
+  {
+    "revision": "06a40f0fd26d8f3c8aa6ac3ce564c55f",
+    "url": "/liga-bank/static/media/handset.06a40f0f.svg"
+  },
+  {
+    "revision": "1c8b710a1da8e6805d0e8f7e46f58dc3",
+    "url": "/liga-bank/static/media/instagram-icon.1c8b710a.svg"
+  },
+  {
     "revision": "2326aab031d70139a40daa20c6b084eb",
     "url": "/liga-bank/static/media/item-icon.2326aab0.svg"
   },
@@ -150,6 +162,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "791e0ae85ac8f4fe1348fd071f320caa",
     "url": "/liga-bank/static/media/minus.791e0ae8.svg"
+  },
+  {
+    "revision": "90511246478ee9bda6d790c7c9c5bd60",
+    "url": "/liga-bank/static/media/mobile-icon.90511246.svg"
   },
   {
     "revision": "9ee8aabfcf732fea94b222116b3770a6",
@@ -220,7 +236,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/slide-3-tab.2c54a215.jpg"
   },
   {
+    "revision": "4963a3b5b2e300d8383b85341ada8fea",
+    "url": "/liga-bank/static/media/twitter-icon.4963a3b5.svg"
+  },
+  {
     "revision": "f1db43257a4ff383046d649c09a31818",
     "url": "/liga-bank/static/media/vault.f1db4325.svg"
+  },
+  {
+    "revision": "e32d317875f7389729c13b0e4cc5d8e3",
+    "url": "/liga-bank/static/media/youtube-icon.e32d3178.svg"
   }
 ]);

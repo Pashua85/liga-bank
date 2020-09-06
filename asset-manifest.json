@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/liga-bank/static/css/main.bb52cbf7.chunk.css",
-    "main.js": "/liga-bank/static/js/main.00ae1ca0.chunk.js",
-    "main.js.map": "/liga-bank/static/js/main.00ae1ca0.chunk.js.map",
+    "main.js": "/liga-bank/static/js/main.a1da2107.chunk.js",
+    "main.js.map": "/liga-bank/static/js/main.a1da2107.chunk.js.map",
     "runtime-main.js": "/liga-bank/static/js/runtime-main.4cb8b82a.js",
     "runtime-main.js.map": "/liga-bank/static/js/runtime-main.4cb8b82a.js.map",
     "static/css/2.11829350.chunk.css": "/liga-bank/static/css/2.11829350.chunk.css",
-    "static/js/2.6fdb1953.chunk.js": "/liga-bank/static/js/2.6fdb1953.chunk.js",
-    "static/js/2.6fdb1953.chunk.js.map": "/liga-bank/static/js/2.6fdb1953.chunk.js.map",
+    "static/js/2.3a0eaebe.chunk.js": "/liga-bank/static/js/2.3a0eaebe.chunk.js",
+    "static/js/2.3a0eaebe.chunk.js.map": "/liga-bank/static/js/2.3a0eaebe.chunk.js.map",
     "index.html": "/liga-bank/index.html",
-    "precache-manifest.48c48c3f3f60c7e7ed7b36d9830a548a.js": "/liga-bank/precache-manifest.48c48c3f3f60c7e7ed7b36d9830a548a.js",
+    "precache-manifest.21a3aa288f22ab2d37213942f428924f.js": "/liga-bank/precache-manifest.21a3aa288f22ab2d37213942f428924f.js",
     "service-worker.js": "/liga-bank/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/liga-bank/static/css/2.11829350.chunk.css.map",
     "static/css/main.bb52cbf7.chunk.css.map": "/liga-bank/static/css/main.bb52cbf7.chunk.css.map",
-    "static/js/2.6fdb1953.chunk.js.LICENSE.txt": "/liga-bank/static/js/2.6fdb1953.chunk.js.LICENSE.txt",
+    "static/js/2.3a0eaebe.chunk.js.LICENSE.txt": "/liga-bank/static/js/2.3a0eaebe.chunk.js.LICENSE.txt",
     "static/media/Roboto-Bold.woff": "/liga-bank/static/media/Roboto-Bold.362391a1.woff",
     "static/media/Roboto-Bold.eot": "/liga-bank/static/media/Roboto-Bold.c830620c.eot",
     "static/media/Roboto-Bold.ttf": "/liga-bank/static/media/Roboto-Bold.e07df86c.ttf",
@@ -37,6 +37,9 @@
     "static/media/checkbox-checked.svg": "/liga-bank/static/media/checkbox-checked.58d99e6c.svg",
     "static/media/checkbox-empty.svg": "/liga-bank/static/media/checkbox-empty.a86f2529.svg",
     "static/media/enter.svg": "/liga-bank/static/media/enter.9580394c.svg",
+    "static/media/facebook-icon.svg": "/liga-bank/static/media/facebook-icon.41bf1cc9.svg",
+    "static/media/handset.svg": "/liga-bank/static/media/handset.06a40f0f.svg",
+    "static/media/instagram-icon.svg": "/liga-bank/static/media/instagram-icon.1c8b710a.svg",
     "static/media/item-icon.svg": "/liga-bank/static/media/item-icon.2326aab0.svg",
     "static/media/location-mobile.svg": "/liga-bank/static/media/location-mobile.95c1e434.svg",
     "static/media/location.svg": "/liga-bank/static/media/location.5c1d0d4c.svg",
@@ -45,6 +48,7 @@
     "static/media/lock-tab.jpg": "/liga-bank/static/media/lock-tab.82542119.jpg",
     "static/media/logo.svg": "/liga-bank/static/media/logo.b2575a4b.svg",
     "static/media/minus.svg": "/liga-bank/static/media/minus.791e0ae8.svg",
+    "static/media/mobile-icon.svg": "/liga-bank/static/media/mobile-icon.90511246.svg",
     "static/media/phone-desk.jpg": "/liga-bank/static/media/phone-desk.9ee8aabf.jpg",
     "static/media/phone-tab.jpg": "/liga-bank/static/media/phone-tab.21122387.jpg",
     "static/media/phone.svg": "/liga-bank/static/media/phone.72cb17ca.svg",
@@ -62,13 +66,15 @@
     "static/media/slide-3-desk.jpg": "/liga-bank/static/media/slide-3-desk.475d11c6.jpg",
     "static/media/slide-3-mobile.jpg": "/liga-bank/static/media/slide-3-mobile.b28eca6d.jpg",
     "static/media/slide-3-tab.jpg": "/liga-bank/static/media/slide-3-tab.2c54a215.jpg",
-    "static/media/vault.svg": "/liga-bank/static/media/vault.f1db4325.svg"
+    "static/media/twitter-icon.svg": "/liga-bank/static/media/twitter-icon.4963a3b5.svg",
+    "static/media/vault.svg": "/liga-bank/static/media/vault.f1db4325.svg",
+    "static/media/youtube-icon.svg": "/liga-bank/static/media/youtube-icon.e32d3178.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4cb8b82a.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.6fdb1953.chunk.js",
+    "static/js/2.3a0eaebe.chunk.js",
     "static/css/main.bb52cbf7.chunk.css",
-    "static/js/main.00ae1ca0.chunk.js"
+    "static/js/main.a1da2107.chunk.js"
   ]
 }
