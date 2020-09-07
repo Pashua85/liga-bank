@@ -108,6 +108,12 @@ export const Button = styled.div<{name: string, isDisabled: boolean}>`
   &:hover {
     box-shadow: ${({isDisabled}) => isDisabled ? `` : `1px 2px 7px rgba(0,0,0,0.5)`};
     transform: ${({isDisabled}) => isDisabled ? `` : `translateY(-1px)`};
+
+    @media ${DEVICE.TABLET} {
+      box-shadow: none;
+      transform: none;
+    }
+
   }
 
   &:active {
