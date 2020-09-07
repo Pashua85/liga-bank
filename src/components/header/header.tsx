@@ -1,18 +1,29 @@
 import React, {FunctionComponent, useState} from 'react';
 import {Transition} from 'react-transition-group';
 import {HeaderStyled, Container, Logo, Login, BurgerIcon, BurgerWrapper} from './style';
+import LoginForm from '../login-form/login-form';
 import HeaderNav from '../header-nav/header-nav';
 
 const Header: FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoginShown, setIsLoginShown] = useState(false);
 
-  function handleBurgerClick() {
+  const handleBurgerClick = () => {
     setIsOpen(!isOpen);
-  }
+  };
 
-  function handleLinkClick() {
+  const handleLinkClick = () => {
     setIsOpen(false);
-  }
+  };
+
+  const openLogin = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    setIsLoginShown(true);
+  };
+
+  const closeLogin = () => {
+    setIsLoginShown(false);
+  };
 
   return (
     <HeaderStyled>
@@ -26,8 +37,12 @@ const Header: FunctionComponent = () => {
         </BurgerWrapper>
         <Logo>ЛИГА Банк</Logo>
         <HeaderNav isOpen={isOpen} onLinkClick={handleLinkClick} />
-        <Login href="#">Войти в Интернет-банк</Login>
+        <Login href="#" onClick={openLogin}>Войти в Интернет-банк</Login>
       </Container>
+      {
+        isLoginShown &&
+        <LoginForm onCloseClick={closeLogin} />
+      }
     </HeaderStyled>
   );
 };

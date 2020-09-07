@@ -3,14 +3,28 @@ import {DEVICE} from '../../variables';
 import logo from '../../assets/logo-big.svg';
 import eyeIcon from '../../assets/eye-icon.svg';
 
+export const FormBackground = styled.div`
+  background-color: rgba(255, 255, 255, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+`;
+
 export const Form = styled.form`
   background-color: #F6F7FF;
   border: 4px solid #2C36F2;
+  left: calc(50% - 272px);
   min-height: 493px;
+  margin-top: -246.5px;
+  position: fixed;
   padding-left: 56px;
   padding-right: 56px;
   padding-top: 55px;
   padding-bottom: 56px;
+  top: 50%;
   width: 544px;
 `;
 
@@ -96,7 +110,7 @@ export const CloseButton = styled.div`
 `;
 
 export const InputGroup = styled.div<{name?: string}>`
-  margin-bottom: ${({name}) => name === `password` ? `5px` : `25px`};
+  margin-bottom: ${({name}) => name === `password` ? `7px` : `25px`};
   position: ${({name}) => name === `password` ? `relative` : ``};
 `;
 
@@ -117,6 +131,10 @@ export const Input = styled.input`
   padding-left: 23px;
   padding-right: 23px;
   width: 100%;
+
+  &:-internal-autofill-selected {
+    background-color: #F6F7FF !important;
+  }
 `;
 
 export const PasswordInput = styled.input`
@@ -140,6 +158,17 @@ export const PasswordButton = styled.div<{isShown: boolean}>`
   position: absolute;
   right: 24px;
   width: ${({isShown}) => isShown ? `` : `22px`};
+  user-select: none;
+`;
+
+export const ForgetLink = styled.a`
+  color: #707C87;
+  display: block;
+  font-size: 12px;
+  line-height: 17px;
+  margin-bottom: 25px;
+  text-align: right;
+  padding-right: 1px;
 `;
 
 export const SubmitButton = styled.button`
@@ -147,7 +176,12 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 4px;
   color: #F6F7FF;
+  font-size: 18px;
   height: 60px;
   outline: none;
   width: 100%;
+
+  &:hover {
+    filter: brightness(110%);
+  }
 `;
