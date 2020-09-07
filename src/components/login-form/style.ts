@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {DEVICE} from '../../variables';
+import {DEVICE, CONTENT_WIDTH} from '../../variables';
 import logo from '../../assets/logo-big.svg';
 import eyeIcon from '../../assets/eye-icon.svg';
 
@@ -14,29 +14,49 @@ export const FormBackground = styled.div`
 `;
 
 export const Form = styled.form`
+
   background-color: #F6F7FF;
   border: 4px solid #2C36F2;
+  display: flex;
+  flex-direction: column;
   left: calc(50% - 272px);
-  min-height: 493px;
   margin-top: -246.5px;
-  position: fixed;
-  padding-left: 56px;
-  padding-right: 56px;
+  position: relative;
+  padding-left: 84px;
+  padding-right: 84px;
   padding-top: 55px;
   padding-bottom: 56px;
   top: 50%;
   width: 544px;
+
+  @media ${DEVICE.TABLET} {
+    width: ${CONTENT_WIDTH.TAB};
+    left: 5.86%;
+  }
+
+  @media ${DEVICE.MOBILE} {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 45px;
+    padding-bottom: 38px;
+    left: 4.685%;
+    width: ${CONTENT_WIDTH.MOBILE};
+  }
 `;
 
 export const HeaderRow = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 37px;
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: 27px;
+  }
 `;
 
 export const Logo = styled.div`
   display: flex;
-  margin-bottom: 37px;
 `;
 
 export const LogoIcon = styled.div`
@@ -48,6 +68,11 @@ export const LogoIcon = styled.div`
   left: -1px;
   width: 32px;
   height: 29px;
+
+  @media ${DEVICE.MOBILE} {
+    left: -6px;
+    margin-right: 1px;
+  }
 `;
 
 export const LogoText = styled.div`
@@ -79,8 +104,8 @@ export const CloseButton = styled.div`
   @media ${DEVICE.MOBILE} {
     height: 12px;
     width: 12px;
-    top: 15px;
-    right: 15px;
+    top: 1px;
+    right: 0;
   }
 
   &:before,
