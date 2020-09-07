@@ -14,7 +14,6 @@ export const FormBackground = styled.div`
 `;
 
 export const Form = styled.form`
-
   background-color: #F6F7FF;
   border: 4px solid #2C36F2;
   display: flex;
@@ -31,14 +30,17 @@ export const Form = styled.form`
 
   @media ${DEVICE.TABLET} {
     width: ${CONTENT_WIDTH.TAB};
-    left: 5.86%;
+    margin-top: 0;
+    position: static;
+    margin-left: 5.86%;
+    margin-top: 10%;
   }
 
   @media ${DEVICE.MOBILE} {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 45px;
-    padding-bottom: 38px;
+    padding-bottom: 41px;
     left: 4.685%;
     width: ${CONTENT_WIDTH.MOBILE};
   }
@@ -49,6 +51,7 @@ export const HeaderRow = styled.div`
   justify-content: space-between;
   position: relative;
   margin-bottom: 37px;
+  order: 1;
 
   @media ${DEVICE.MOBILE} {
     margin-bottom: 27px;
@@ -136,7 +139,12 @@ export const CloseButton = styled.div`
 
 export const InputGroup = styled.div<{name?: string}>`
   margin-bottom: ${({name}) => name === `password` ? `7px` : `25px`};
+  order: ${({name}) => name === `password` ? `3` : `2`};
   position: ${({name}) => name === `password` ? `relative` : ``};
+
+  @media ${DEVICE.MOBILE} {
+    margin-bottom: ${({name}) => name === `password` ? `30px` : `20px`};
+  }
 `;
 
 export const Label = styled.div`
@@ -168,6 +176,7 @@ export const PasswordInput = styled.input`
   border-color:  #1F1E25;
   border-radius: 4px;
   height: 60px;
+  order: 3;
   padding-left: 23px;
   padding-right: 23px;
   width: 100%;
@@ -180,20 +189,35 @@ export const PasswordButton = styled.div<{isShown: boolean}>`
   height: ${({isShown}) => isShown ? `` : `12px`};
   font-size: ${({isShown}) => isShown ? `8px` : `0px`};
   text-transform: uppercase;
+  order: 4;
   position: absolute;
   right: 24px;
   width: ${({isShown}) => isShown ? `` : `22px`};
   user-select: none;
+
+  @media ${DEVICE.MOBILE} {
+    right: 16px;
+  }
 `;
 
 export const ForgetLink = styled.a`
   color: #707C87;
+  cursor: pointer;
   display: block;
   font-size: 12px;
   line-height: 17px;
   margin-bottom: 25px;
   text-align: right;
+  order: 5;
   padding-right: 1px;
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 14px;
+    line-height: 20px;
+    order: 6;
+    margin-bottom: 0;
+    text-align: center;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -203,10 +227,18 @@ export const SubmitButton = styled.button`
   color: #F6F7FF;
   font-size: 18px;
   height: 60px;
+  order: 6;
   outline: none;
   width: 100%;
 
   &:hover {
     filter: brightness(110%);
+  }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 14px;
+    height: 51px;
+    margin-bottom: 10px;
+    order: 5;
   }
 `;

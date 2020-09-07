@@ -130,6 +130,7 @@ export const Login = styled.a`
   align-items: center;
   display: block;
   color: ${MAIN_FONT_COLOR};
+  cursor: pointer;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 19px;
