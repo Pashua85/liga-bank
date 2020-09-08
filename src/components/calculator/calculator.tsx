@@ -8,7 +8,8 @@ import CheckboxField from '../checkbox-field/checkbox-field';
 import OfferError from '../offer-error/offer-error';
 import Offer from '../offer/offer';
 import RequestForm from '../request-form/request-form';
-import { CheckboxWrapper } from '../departments/style';
+import {CheckboxWrapper} from '../departments/style';
+import {getCurrencyWord} from '../../assets/getCurrencyWord';
 
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
@@ -65,11 +66,11 @@ const Calculator: FunctionComponent = () => {
 
   useEffect(() => {
     if (calculatorType === `Ипотечное кредитование`) {
-      setInitPayment(value * 0.1);
-      setMinInitPayment(value * 0.1);
+      setInitPayment(Math.round(value * 0.1));
+      setMinInitPayment(Math.round(value * 0.1));
     } else if (calculatorType === `Автомобильное кредитование`) {
-      setInitPayment(value * 0.2);
-      setMinInitPayment(value * 0.2);
+      setInitPayment(Math.round(value * 0.2));
+      setMinInitPayment(Math.round(value * 0.2));
     }
   }, [value, calculatorType]);
 
@@ -232,7 +233,7 @@ const Calculator: FunctionComponent = () => {
                 min={minInitPayment}
                 max={value}
                 onValidChange={handleInitPaymentChange}
-                items="рублей"
+                items={getCurrencyWord(initPayment)}
               />
               <RangeWrapper>
                 <RangeSlider
@@ -288,7 +289,7 @@ const Calculator: FunctionComponent = () => {
                 min={minInitPayment}
                 max={value}
                 onValidChange={handleInitPaymentChange}
-                items="рублей"
+                items={getCurrencyWord(initPayment)}
               />
               <RangeWrapper>
                 <RangeSlider

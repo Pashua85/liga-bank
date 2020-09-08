@@ -1,5 +1,6 @@
 import React, {FunctionComponent, useState, useEffect} from 'react';
 import {Container, Title, Field, Input, Span, ErrorSpan, InnerField, Button, Subtitle} from './style';
+import {getCurrencyWord} from '../../assets/getCurrencyWord';
 
 interface FieldWithButtonsProps {
   value: number,
@@ -80,7 +81,7 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
             min={minValue}
             max={maxValue}
           />
-          <Span>рублей</Span>
+          <Span>{getCurrencyWord(inputValue)}</Span>
         </InnerField>
         <ErrorSpan>{errorMessage}</ErrorSpan>
         <Button name="increase" isDisabled={inputValue >= maxValue} onClick={handleIncreaseClick} />
