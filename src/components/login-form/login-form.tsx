@@ -60,7 +60,7 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick}) => {
             value={login}
             onChange={handleLoginChange}
             placeholder=""
-            autoComplete="off"
+            autoFocus
           />
         </InputGroup>
         <InputGroup name="password">

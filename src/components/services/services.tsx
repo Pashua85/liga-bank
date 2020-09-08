@@ -9,13 +9,13 @@ const Services: FunctionComponent = () => {
 
   if (width <= 1023) {
     return (
-      <Container>
+      <Container id="services">
         <ServicesSlider />
       </Container>
     );
   } else {
     return (
-      <Container>
+      <Container id="services">
         <DesktopServices />
       </Container>
     );

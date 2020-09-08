@@ -6,14 +6,14 @@ export type SocialName = `facebook` | `instagram` | `twitter` | `youtube`
 
 const Footer: FunctionComponent = () => {
   return (
-    <FooterStyled>
+    <FooterStyled id="footer">
       <Container>
         <Navigation>
           <Logo>ЛИГА Банк</Logo>
           <Address>150015, г. Москва, ул. Московская, д. 32 Генеральная лицензия Банка России №1050 Ⓒ Лига Банк, 2019</Address>
           <NavMenu>
-            <NavLink>Услуги</NavLink>
-            <NavLink>Рассчитать кредит</NavLink>
+            <NavLink href="#services">Услуги</NavLink>
+            <NavLink href="#calculator">Рассчитать кредит</NavLink>
             <NavLink>Контакты</NavLink>
             <NavLink>Задать вопрос</NavLink>
           </NavMenu>

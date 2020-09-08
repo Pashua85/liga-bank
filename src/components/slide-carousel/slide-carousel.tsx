@@ -24,7 +24,7 @@ const SlideCarousel: FunctionComponent = () => {
 
   return (
     <div className="slide-carousel">
-      <Carousel activeIndex={index} onSelect={handleSelect} interval={null} fade={false} pause={false} defaultActiveIndex={0}>
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={4000} fade={false} pause={false} defaultActiveIndex={0}>
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -38,7 +38,7 @@ const SlideCarousel: FunctionComponent = () => {
           <Carousel.Caption>
             <h1 className="caption-header .caption-header--white">Лига Банк</h1>
             <p className="caption-text .caption-text--white">Кредиты на любой случай</p>
-            <a href="/" className="caption-btn caption-btn--white">Рассчитать кредит</a>
+            <a href="#calculator" className="caption-btn caption-btn--white">Рассчитать кредит</a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -69,7 +69,7 @@ const SlideCarousel: FunctionComponent = () => {
           <Carousel.Caption>
             <h1 className="caption-header caption-header--black">Лига Банк</h1>
             <p className="caption-text caption-text--black">Всегда рядом</p>
-            <a href="/" className="caption-btn caption-btn--blue">Найти отделение</a>
+            <a href="#departments" className="caption-btn caption-btn--blue">Найти отделение</a>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

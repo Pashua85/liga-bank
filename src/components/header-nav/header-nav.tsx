@@ -8,8 +8,7 @@ interface HeaderNavProps {
 }
 
 const HeaderNav: FunctionComponent<HeaderNavProps> = ({isOpen, onLinkClick}) => {
-  function handleClick(e: React.SyntheticEvent) {
-    e.preventDefault();
+  function handleClick() {
     onLinkClick();
   }
 
@@ -19,16 +18,16 @@ const HeaderNav: FunctionComponent<HeaderNavProps> = ({isOpen, onLinkClick}) => 
         <Nav isOpen={isOpen} state={state}>
           <NavList>
             <NavItem>
-              <NavLink href="#" onClick={handleClick}>Услуги</NavLink>
+              <NavLink href="#services" onClick={handleClick}>Услуги</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#" onClick={handleClick}>Рассчитать кредит</NavLink>
+              <NavLink href="#calculator" onClick={handleClick}>Рассчитать кредит</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#" onClick={handleClick}>Контакты</NavLink>
+              <NavLink href="#footer" onClick={handleClick}>Контакты</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#" onClick={handleClick}>Задать вопрос</NavLink>
+              <NavLink onClick={handleClick}>Задать вопрос</NavLink>
             </NavItem>
           </NavList>
         </Nav>

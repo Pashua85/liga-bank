@@ -200,7 +200,7 @@ const Calculator: FunctionComponent = () => {
   };
 
   return (
-    <Container>
+    <Container id="calculator">
       <Header>Кредитный калькулятор</Header>
       <Row isFormShown={isFormShown}>
         <Column>

@@ -55,7 +55,7 @@ const Departments: FunctionComponent = () => {
   };
 
   return (
-    <Container>
+    <Container id="departments">
       <Header>Отделения Лига Банка</Header>
       <Filters>
         <CheckboxWrapper>

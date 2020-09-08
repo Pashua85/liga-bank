@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import {GlobalStyles} from './style';
+import {GlobalStyles, AppWrapper} from './style';
 import Header from '../header/header';
 import SlideCarousel from '../slide-carousel/slide-carousel';
 import Services from '../services/services';
@@ -10,7 +10,7 @@ import Footer from '../footer/footer';
 
 const App: FunctionComponent = () => {
   return (
-    <div>
+    <AppWrapper>
       <GlobalStyles />
       <Header />
       <SlideCarousel />
@@ -18,7 +18,7 @@ const App: FunctionComponent = () => {
       <Calculator />
       <Departments />
       <Footer />
-    </div>
+    </AppWrapper>
   );
 };
 
