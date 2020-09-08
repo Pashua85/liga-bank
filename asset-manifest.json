@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/liga-bank/static/css/main.8f882172.chunk.css",
-    "main.js": "/liga-bank/static/js/main.deb22ac2.chunk.js",
-    "main.js.map": "/liga-bank/static/js/main.deb22ac2.chunk.js.map",
+    "main.js": "/liga-bank/static/js/main.bcda59da.chunk.js",
+    "main.js.map": "/liga-bank/static/js/main.bcda59da.chunk.js.map",
     "runtime-main.js": "/liga-bank/static/js/runtime-main.4cb8b82a.js",
     "runtime-main.js.map": "/liga-bank/static/js/runtime-main.4cb8b82a.js.map",
     "static/css/2.11829350.chunk.css": "/liga-bank/static/css/2.11829350.chunk.css",
     "static/js/2.ccfc049f.chunk.js": "/liga-bank/static/js/2.ccfc049f.chunk.js",
     "static/js/2.ccfc049f.chunk.js.map": "/liga-bank/static/js/2.ccfc049f.chunk.js.map",
     "index.html": "/liga-bank/index.html",
-    "precache-manifest.4070cab481385f490848b3a5a54f929d.js": "/liga-bank/precache-manifest.4070cab481385f490848b3a5a54f929d.js",
+    "precache-manifest.4a9652db905d13a4a4d3d862c27eea25.js": "/liga-bank/precache-manifest.4a9652db905d13a4a4d3d862c27eea25.js",
     "service-worker.js": "/liga-bank/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/liga-bank/static/css/2.11829350.chunk.css.map",
     "static/css/main.8f882172.chunk.css.map": "/liga-bank/static/css/main.8f882172.chunk.css.map",
@@ -77,6 +77,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.ccfc049f.chunk.js",
     "static/css/main.8f882172.chunk.css",
-    "static/js/main.deb22ac2.chunk.js"
+    "static/js/main.bcda59da.chunk.js"
   ]
 }
