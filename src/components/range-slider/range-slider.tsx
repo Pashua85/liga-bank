@@ -8,10 +8,13 @@ interface RangeSliderProps {
   step: number,
   onChange: (newPercent: number) => void,
   hasBorders: boolean,
-  items: string
+  items?: string,
+  minItems?: string,
+  maxItems?: string
 }
 
-const RangeSlider: FunctionComponent<RangeSliderProps> = ({value, min, max, step, onChange, hasBorders, items}) => {
+const RangeSlider: FunctionComponent<RangeSliderProps> = ({value, min, max, step, onChange, hasBorders, items,
+  minItems, maxItems}) => {
 
   const handleSlide = (e: React.SyntheticEvent) => {
     onChange(parseInt((e.target as HTMLInputElement).value, 10));
@@ -27,8 +30,8 @@ const RangeSlider: FunctionComponent<RangeSliderProps> = ({value, min, max, step
       {
         hasBorders &&
         <React.Fragment>
-          <Label place="start">{`${min} ${items}`}</Label>
-          <Label place="end">{`${max} ${items}`}</Label>
+          <Label place="start">{`${min} ${minItems}`}</Label>
+          <Label place="end">{`${max} ${maxItems}`}</Label>
         </React.Fragment>
       }
     </Container>

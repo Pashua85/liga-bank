@@ -10,6 +10,7 @@ import Offer from '../offer/offer';
 import RequestForm from '../request-form/request-form';
 import {CheckboxWrapper} from '../departments/style';
 import {getCurrencyWord} from '../../assets/getCurrencyWord';
+import {getYearsWord} from '../../assets/getYearsWord';
 
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
@@ -252,7 +253,7 @@ const Calculator: FunctionComponent = () => {
                 min={5}
                 max={30}
                 onValidChange={handleTermChange}
-                items="лет"
+                items={getYearsWord(termInYears)}
               />
               <RangeWrapper name="years">
                 <RangeSlider
@@ -262,7 +263,8 @@ const Calculator: FunctionComponent = () => {
                   step={1}
                   onChange={handleTermChange}
                   hasBorders={true}
-                  items="лет"
+                  minItems={getYearsWord(5)}
+                  maxItems={getYearsWord(30)}
                 />
               </RangeWrapper>
               <CheckboxField
@@ -308,7 +310,7 @@ const Calculator: FunctionComponent = () => {
                 min={1}
                 max={5}
                 onValidChange={handleTermChange}
-                items="лет"
+                items={getYearsWord(termInYears)}
               />
               <RangeWrapper name="years">
                 <RangeSlider
@@ -318,7 +320,8 @@ const Calculator: FunctionComponent = () => {
                   step={1}
                   onChange={handleTermChange}
                   hasBorders={true}
-                  items="лет"
+                  minItems={getYearsWord(1)}
+                  maxItems={getYearsWord(5)}
                 />
               </RangeWrapper>
               <CheckboxWrapper>
@@ -354,7 +357,7 @@ const Calculator: FunctionComponent = () => {
                 min={1}
                 max={7}
                 onValidChange={handleTermChange}
-                items="лет"
+                items={getYearsWord(termInYears)}
               />
               <RangeWrapper name="years">
                 <RangeSlider
@@ -364,7 +367,8 @@ const Calculator: FunctionComponent = () => {
                   step={1}
                   onChange={handleTermChange}
                   hasBorders={true}
-                  items="лет"
+                  minItems={getYearsWord(1)}
+                  maxItems={getYearsWord(7)}
                 />
               </RangeWrapper>
               <CheckboxField

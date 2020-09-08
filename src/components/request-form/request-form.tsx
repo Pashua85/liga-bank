@@ -4,6 +4,8 @@ import isEmail from 'validator/es/lib/isEmail';
 import {Form, Header, List, Item, ItemLabel, ItemValue, InputGroup, Input, InputField, Button, ErrorSpan,
   MessageBackground, MessageCard, MessageTitle, MessageText, CloseButton} from './style';
 import {CalculatorType} from '../calculator/calculator';
+import {getCurrencyWord} from '../../assets/getCurrencyWord';
+import {getYearsWord} from '../../assets/getYearsWord';
 
 interface RequestFormProps {
   requestNumber: number,
@@ -97,18 +99,18 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
         </Item>
         <Item>
           <ItemLabel>{valueLabel}</ItemLabel>
-          <ItemValue>{value.toLocaleString()} рублей</ItemValue>
+          <ItemValue>{`${value.toLocaleString()} ${getCurrencyWord(value)}`}</ItemValue>
         </Item>
         {
           calculatorType !== `Потребительский кредит` &&
           <Item>
             <ItemLabel>Первоначальный взнос</ItemLabel>
-            <ItemValue>{initPayment.toLocaleString()} рублей</ItemValue>
+            <ItemValue>{`${initPayment.toLocaleString()} ${getCurrencyWord(initPayment)}`}</ItemValue>
           </Item>
         }
         <Item>
           <ItemLabel>Срок кредитования</ItemLabel>
-          <ItemValue>{termInYears} лет</ItemValue>
+          <ItemValue>{`${termInYears} ${getYearsWord(termInYears)}`}</ItemValue>
         </Item>
       </List>
       <InputGroup>
