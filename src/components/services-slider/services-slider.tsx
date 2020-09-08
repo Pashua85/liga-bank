@@ -57,7 +57,7 @@ const ServicesSlider: FunctionComponent = () => {
           <ListItem>Автокредит</ListItem>
           <ListItem>Потребительский кредит</ListItem>
         </List>
-        <Text>Рассчитайте ежемесячный платеж<br/> и ставку по кредиту воспользовавшись нашим <Link href="/">кредитным калькулятором</Link></Text>
+        <Text>Рассчитайте ежемесячный платеж<br/> и ставку по кредиту воспользовавшись нашим <Link href="#calculator">кредитным калькулятором</Link></Text>
       </Column>
       <Image imageUrl={chooseSrc(width, {
         deskSrc: carDesk,

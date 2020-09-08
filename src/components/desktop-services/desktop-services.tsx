@@ -84,7 +84,7 @@ const DesktopServices: FunctionComponent = () => {
               <CardItem>Потребительский кредит</CardItem>
             </CardList>
             <CardDetails>
-              Рассчитайте ежемесячный платеж<br/> и ставку по кредиту воспользовавшись нашим <CardDetailLink href="/">кредитным калькулятором</CardDetailLink>
+              Рассчитайте ежемесячный платеж<br/> и ставку по кредиту воспользовавшись нашим <CardDetailLink href="#calculator">кредитным калькулятором</CardDetailLink>
             </CardDetails>
           </CardColumn>
           <CardImage imageUrl={car} />
