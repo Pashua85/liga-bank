@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/liga-bank/static/css/main.3434ff44.chunk.css",
-    "main.js": "/liga-bank/static/js/main.1dc26c09.chunk.js",
-    "main.js.map": "/liga-bank/static/js/main.1dc26c09.chunk.js.map",
+    "main.css": "/liga-bank/static/css/main.8f882172.chunk.css",
+    "main.js": "/liga-bank/static/js/main.deb22ac2.chunk.js",
+    "main.js.map": "/liga-bank/static/js/main.deb22ac2.chunk.js.map",
     "runtime-main.js": "/liga-bank/static/js/runtime-main.4cb8b82a.js",
     "runtime-main.js.map": "/liga-bank/static/js/runtime-main.4cb8b82a.js.map",
     "static/css/2.11829350.chunk.css": "/liga-bank/static/css/2.11829350.chunk.css",
     "static/js/2.ccfc049f.chunk.js": "/liga-bank/static/js/2.ccfc049f.chunk.js",
     "static/js/2.ccfc049f.chunk.js.map": "/liga-bank/static/js/2.ccfc049f.chunk.js.map",
     "index.html": "/liga-bank/index.html",
-    "precache-manifest.626584fa2c15fb18f0fe7a01371bfd8f.js": "/liga-bank/precache-manifest.626584fa2c15fb18f0fe7a01371bfd8f.js",
+    "precache-manifest.4070cab481385f490848b3a5a54f929d.js": "/liga-bank/precache-manifest.4070cab481385f490848b3a5a54f929d.js",
     "service-worker.js": "/liga-bank/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/liga-bank/static/css/2.11829350.chunk.css.map",
-    "static/css/main.3434ff44.chunk.css.map": "/liga-bank/static/css/main.3434ff44.chunk.css.map",
+    "static/css/main.8f882172.chunk.css.map": "/liga-bank/static/css/main.8f882172.chunk.css.map",
     "static/js/2.ccfc049f.chunk.js.LICENSE.txt": "/liga-bank/static/js/2.ccfc049f.chunk.js.LICENSE.txt",
     "static/media/Roboto-Bold.woff": "/liga-bank/static/media/Roboto-Bold.362391a1.woff",
     "static/media/Roboto-Bold.eot": "/liga-bank/static/media/Roboto-Bold.c830620c.eot",
@@ -76,7 +76,7 @@
     "static/js/runtime-main.4cb8b82a.js",
     "static/css/2.11829350.chunk.css",
     "static/js/2.ccfc049f.chunk.js",
-    "static/css/main.3434ff44.chunk.css",
-    "static/js/main.1dc26c09.chunk.js"
+    "static/css/main.8f882172.chunk.css",
+    "static/js/main.deb22ac2.chunk.js"
   ]
 }
