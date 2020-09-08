@@ -28,6 +28,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
     
 
     @media ${DEVICE.TABLET} {
