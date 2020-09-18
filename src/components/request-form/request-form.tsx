@@ -53,7 +53,10 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
 
   const handlePhoneChange = (e: React.SyntheticEvent): void => {
     setPhoneError(``);
-    setPhone((e.target as HTMLInputElement).value);
+    const telephone = (e.target as HTMLInputElement).value;
+    if (telephone === `` || /^[0-9\b]+$/.test(telephone)) {
+      setPhone(telephone);
+    }
   };
 
   const handleEmailChange = (e: React.SyntheticEvent): void => {
