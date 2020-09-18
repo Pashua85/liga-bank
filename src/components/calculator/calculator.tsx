@@ -41,7 +41,7 @@ const Calculator: FunctionComponent = () => {
       setInitPayment(200000);
       setInitPercent(10);
       setTermInYears(5);
-      setMaternalCapital(true);
+      setMaternalCapital(false);
       setMinLoanAmount(500000);
       setIsAmmountCorrect(true);
       setInterestRate(9.4);
@@ -50,8 +50,8 @@ const Calculator: FunctionComponent = () => {
       setInitPayment(300000);
       setInitPercent(20);
       setTermInYears(1);
-      setInsuranse(true);
-      setCasco(true);
+      setInsuranse(false);
+      setCasco(false);
       setMinLoanAmount(200000);
       setIsAmmountCorrect(true);
       setInterestRate(3.5);
