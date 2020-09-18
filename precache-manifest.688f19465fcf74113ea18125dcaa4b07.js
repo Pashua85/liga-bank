@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f032f03f323e7105b991f554a311c6d",
+    "revision": "f7f942e61f52bc0017a3ce78de81896a",
     "url": "/liga-bank/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "d32a8b93deb9e72bcf29",
-    "url": "/liga-bank/static/css/main.8f882172.chunk.css"
+    "revision": "7c9c09f064e87f8bd2cd",
+    "url": "/liga-bank/static/css/main.cb46d9ec.chunk.css"
   },
   {
     "revision": "29e0db664deb5e0a4fda",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/js/2.ccfc049f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d32a8b93deb9e72bcf29",
-    "url": "/liga-bank/static/js/main.d2117f2c.chunk.js"
+    "revision": "7c9c09f064e87f8bd2cd",
+    "url": "/liga-bank/static/js/main.3e28a5bc.chunk.js"
   },
   {
     "revision": "467e6a30de2769c04192",
@@ -36,12 +36,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/Roboto-Bold.c830620c.eot"
   },
   {
-    "revision": "cb2e40c8b5bffd9720492c84bcae579f",
-    "url": "/liga-bank/static/media/Roboto-Bold.cb2e40c8.svg"
-  },
-  {
     "revision": "e07df86cef2e721115583d61d1fb68a6",
     "url": "/liga-bank/static/media/Roboto-Bold.e07df86c.ttf"
+  },
+  {
+    "revision": "e3fe661fbbde1bf318a2de33d9581f6b",
+    "url": "/liga-bank/static/media/Roboto-Bold.e3fe661f.svg"
   },
   {
     "revision": "3af1eaf1b8cf9d9255fc3c4c0263ea1f",
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/Roboto-Medium.5905522c.woff"
   },
   {
-    "revision": "a428c74837d096388d618d2a22ead53b",
-    "url": "/liga-bank/static/media/Roboto-Medium.a428c748.svg"
+    "revision": "9957e9806cfcc1d9f66ee7bd35af57fe",
+    "url": "/liga-bank/static/media/Roboto-Medium.9957e980.svg"
   },
   {
     "revision": "11eabca2251325cfc5589c9c6fb57b46",
@@ -68,16 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/Roboto-Regular.316f1251.woff"
   },
   {
-    "revision": "7b74a02b9048295858ad6268031b6154",
-    "url": "/liga-bank/static/media/Roboto-Regular.7b74a02b.svg"
-  },
-  {
     "revision": "87d067c8dfc595eba42ff9d94b382d57",
     "url": "/liga-bank/static/media/Roboto-Regular.87d067c8.eot"
   },
   {
-    "revision": "21352c49fbc90682f5d4eb4be5c191ac",
-    "url": "/liga-bank/static/media/WorkSans-Bold.21352c49.svg"
+    "revision": "97dcef12a7d92d3ca265a3c4ad67cc01",
+    "url": "/liga-bank/static/media/Roboto-Regular.97dcef12.svg"
   },
   {
     "revision": "81d6c31b9e0396a9cd1fbfe255c057fa",
@@ -86,6 +82,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "916edc197d2c588a03fe96cba2e6970b",
     "url": "/liga-bank/static/media/WorkSans-Bold.916edc19.eot"
+  },
+  {
+    "revision": "986039c370c4d134798df3a9da48583f",
+    "url": "/liga-bank/static/media/WorkSans-Bold.986039c3.svg"
   },
   {
     "revision": "a0bf66dd6fc75494a0a51f7662a99c41",
@@ -104,48 +104,48 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/car-tab.c679ecde.jpg"
   },
   {
-    "revision": "1c96b29089413629d7906b6962816c68",
-    "url": "/liga-bank/static/media/cards.1c96b290.svg"
+    "revision": "92accfd79ecd67afba24536d88dde759",
+    "url": "/liga-bank/static/media/cards.92accfd7.svg"
   },
   {
-    "revision": "b8c89443bf7cd73e18450571b783c582",
-    "url": "/liga-bank/static/media/checkbox-checked.b8c89443.svg"
+    "revision": "58d99e6cf9b3b18ad162c7feda4665a4",
+    "url": "/liga-bank/static/media/checkbox-checked.58d99e6c.svg"
   },
   {
-    "revision": "44f3bd7d995532ff87a8d690da5843a3",
-    "url": "/liga-bank/static/media/checkbox-empty.44f3bd7d.svg"
+    "revision": "a86f252906d245b95d07c9713c3d0b49",
+    "url": "/liga-bank/static/media/checkbox-empty.a86f2529.svg"
   },
   {
-    "revision": "98fde0a78ec3421fa542d56140f4e96d",
-    "url": "/liga-bank/static/media/enter.98fde0a7.svg"
+    "revision": "9580394c6a0bf1c9160334be71476b5d",
+    "url": "/liga-bank/static/media/enter.9580394c.svg"
   },
   {
-    "revision": "3df736f94c1ec23c06445d422cdbfbad",
-    "url": "/liga-bank/static/media/eye-icon.3df736f9.svg"
+    "revision": "282a934263e2528bb6e3065f026ffbc8",
+    "url": "/liga-bank/static/media/eye-icon.282a9342.svg"
   },
   {
-    "revision": "ee0e2453b18d0094d6bb1c8c44b87594",
-    "url": "/liga-bank/static/media/facebook-icon.ee0e2453.svg"
+    "revision": "41bf1cc964250f71f1f30295511e2132",
+    "url": "/liga-bank/static/media/facebook-icon.41bf1cc9.svg"
   },
   {
-    "revision": "9c9803853b023ef822ae0a4283790e24",
-    "url": "/liga-bank/static/media/handset.9c980385.svg"
+    "revision": "06a40f0fd26d8f3c8aa6ac3ce564c55f",
+    "url": "/liga-bank/static/media/handset.06a40f0f.svg"
   },
   {
-    "revision": "b31d6968a24ff775ffe781baa9f6c767",
-    "url": "/liga-bank/static/media/instagram-icon.b31d6968.svg"
+    "revision": "1c8b710a1da8e6805d0e8f7e46f58dc3",
+    "url": "/liga-bank/static/media/instagram-icon.1c8b710a.svg"
   },
   {
-    "revision": "6e293675b71fa07c972590f9109bed96",
-    "url": "/liga-bank/static/media/item-icon.6e293675.svg"
+    "revision": "2326aab031d70139a40daa20c6b084eb",
+    "url": "/liga-bank/static/media/item-icon.2326aab0.svg"
   },
   {
-    "revision": "fcb252109ee07c70cf206efc8a4eeaf5",
-    "url": "/liga-bank/static/media/location-mobile.fcb25210.svg"
+    "revision": "95c1e434475d781a28f56a6b6f5e392a",
+    "url": "/liga-bank/static/media/location-mobile.95c1e434.svg"
   },
   {
-    "revision": "43fe0997be3e0d4d899e37ee3a94fa68",
-    "url": "/liga-bank/static/media/location.43fe0997.svg"
+    "revision": "5c1d0d4c2863d2060bed408af135bbb8",
+    "url": "/liga-bank/static/media/location.5c1d0d4c.svg"
   },
   {
     "revision": "fab33c84c731741d5a967cfe048677a3",
@@ -160,20 +160,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/lock-tab.82542119.jpg"
   },
   {
-    "revision": "fe742854263941637e95c2110d79d437",
-    "url": "/liga-bank/static/media/logo-big.fe742854.svg"
+    "revision": "6cd2f929da046cdbe3d26dfa2d4df34d",
+    "url": "/liga-bank/static/media/logo-big.6cd2f929.svg"
   },
   {
-    "revision": "909db6c49d81135d0418ca5c4a118ac0",
-    "url": "/liga-bank/static/media/logo.909db6c4.svg"
+    "revision": "b2575a4be6576b1d574c78b9101cb76e",
+    "url": "/liga-bank/static/media/logo.b2575a4b.svg"
   },
   {
-    "revision": "51bd096e83b0b8203a9758285f048867",
-    "url": "/liga-bank/static/media/minus.51bd096e.svg"
+    "revision": "791e0ae85ac8f4fe1348fd071f320caa",
+    "url": "/liga-bank/static/media/minus.791e0ae8.svg"
   },
   {
-    "revision": "247d903f47a75411b244b3fcc2e2a20b",
-    "url": "/liga-bank/static/media/mobile-icon.247d903f.svg"
+    "revision": "90511246478ee9bda6d790c7c9c5bd60",
+    "url": "/liga-bank/static/media/mobile-icon.90511246.svg"
   },
   {
     "revision": "9ee8aabfcf732fea94b222116b3770a6",
@@ -184,8 +184,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/phone-tab.21122387.jpg"
   },
   {
-    "revision": "83be338ee6696947ef2d511ab69330ef",
-    "url": "/liga-bank/static/media/phone.83be338e.svg"
+    "revision": "72cb17cab2119e64efcc1f4123dfeb26",
+    "url": "/liga-bank/static/media/phone.72cb17ca.svg"
   },
   {
     "revision": "1faa906a6032e430d95ce71c96517295",
@@ -196,16 +196,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/piggybank-tab.aaed9691.jpg"
   },
   {
-    "revision": "fc3792ae2440b783b3da21567c2c23ed",
-    "url": "/liga-bank/static/media/plus.fc3792ae.svg"
+    "revision": "7268bf123358d90bbc8e0dff06182167",
+    "url": "/liga-bank/static/media/plus.7268bf12.svg"
   },
   {
-    "revision": "f8816ae5f4f34fe6b6fb1e19d9d10805",
-    "url": "/liga-bank/static/media/security.f8816ae5.svg"
+    "revision": "d3887f8b9fee47bf28322999aafe2bd7",
+    "url": "/liga-bank/static/media/security.d3887f8b.svg"
   },
   {
-    "revision": "a2f01ed31c3f0909661cb4016b3a1215",
-    "url": "/liga-bank/static/media/select-icon.a2f01ed3.svg"
+    "revision": "e6330e81120f81cb62a362889c9ed2e4",
+    "url": "/liga-bank/static/media/select-icon.e6330e81.svg"
   },
   {
     "revision": "a26fed1566f4c2056094a30fddcc70c8",
@@ -244,15 +244,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/slide-3-tab.2c54a215.jpg"
   },
   {
-    "revision": "dacb5c0238402b9e8ca42619b1037006",
-    "url": "/liga-bank/static/media/twitter-icon.dacb5c02.svg"
+    "revision": "4963a3b5b2e300d8383b85341ada8fea",
+    "url": "/liga-bank/static/media/twitter-icon.4963a3b5.svg"
   },
   {
-    "revision": "40b2f5afead891f7b4b640294ee827e5",
-    "url": "/liga-bank/static/media/vault.40b2f5af.svg"
+    "revision": "f1db43257a4ff383046d649c09a31818",
+    "url": "/liga-bank/static/media/vault.f1db4325.svg"
   },
   {
-    "revision": "2a08c100d25e7905787cccfff7f68352",
-    "url": "/liga-bank/static/media/youtube-icon.2a08c100.svg"
+    "revision": "e32d317875f7389729c13b0e4cc5d8e3",
+    "url": "/liga-bank/static/media/youtube-icon.e32d3178.svg"
   }
 ]);
