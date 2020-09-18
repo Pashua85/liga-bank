@@ -121,6 +121,7 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
             value={name}
             onChange={handleNameChange}
             placeholder="ФИО"
+            autoFocus
           />
           <ErrorSpan>{nameError}</ErrorSpan>
         </InputField>
