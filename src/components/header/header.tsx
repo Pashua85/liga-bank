@@ -1,12 +1,33 @@
-import React, {FunctionComponent, useState} from 'react';
+import React, {FunctionComponent, useState, useRef, useEffect, MutableRefObject} from 'react';
 import {Transition} from 'react-transition-group';
 import {HeaderStyled, Container, Logo, Login, BurgerIcon, BurgerWrapper} from './style';
 import LoginForm from '../login-form/login-form';
 import HeaderNav from '../header-nav/header-nav';
 
+type BodyRef = MutableRefObject<undefined> | MutableRefObject<HTMLElement>;
+
 const Header: FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoginShown, setIsLoginShown] = useState(false);
+
+  const bodyRef: BodyRef = useRef();
+
+  useEffect(() => {
+    bodyRef.current = document.body;
+  });
+
+  useEffect(() => {
+    if (isLoginShown && bodyRef.current !== undefined) {
+      bodyRef.current.classList.add(`body--overflow-hidden`);
+    } else if (!isLoginShown && bodyRef.current !== undefined) {
+      bodyRef.current.classList.remove(`body--overflow-hidden`);
+    }
+    return (() => {
+      if (bodyRef.current !== undefined) {
+        bodyRef.current.classList.remove(`body--overflow-hidden`);
+      }
+    });
+  }, [isLoginShown, bodyRef]);
 
   const handleBurgerClick = () => {
     setIsOpen(!isOpen);
@@ -41,7 +62,7 @@ const Header: FunctionComponent = () => {
       </Container>
       {
         isLoginShown &&
-        <LoginForm onCloseClick={closeLogin} />
+        <LoginForm onCloseClick={closeLogin} onFormSubmit={closeLogin} />
       }
     </HeaderStyled>
   );

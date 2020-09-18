@@ -41,6 +41,10 @@ export const GlobalStyles = createGlobalStyle`
       line-height: 20px;
     }
   }
+
+  .body--overflow-hidden {
+    overflow: hidden;
+  }
 `;
 
 export const AppWrapper = styled.div``;

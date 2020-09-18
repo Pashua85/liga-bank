@@ -4,9 +4,10 @@ import {FormBackground, Form, HeaderRow, Logo, LogoIcon, LogoText, LogoTitle, Lo
 
 interface LoginFormProps {
   onCloseClick: () => void
+  onFormSubmit: () => void
 }
 
-const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick}) => {
+const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmit}) => {
   const [login, setLogin] = useState(``);
   const [password, setPassword] = useState(``);
   const [isShown, setIsShown] = useState(false);
@@ -37,6 +38,7 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick}) => {
 
   const handleFormSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
+    onFormSubmit();
   };
 
   return (
