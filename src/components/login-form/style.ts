@@ -140,7 +140,7 @@ export const CloseButton = styled.div`
 export const InputGroup = styled.div<{name?: string}>`
   margin-bottom: ${({name}) => name === `password` ? `7px` : `25px`};
   order: ${({name}) => name === `password` ? `3` : `2`};
-  position: ${({name}) => name === `password` ? `relative` : ``};
+  position: relative;
 
   @media ${DEVICE.MOBILE} {
     margin-bottom: ${({name}) => name === `password` ? `30px` : `20px`};
@@ -241,4 +241,14 @@ export const SubmitButton = styled.button`
     margin-bottom: 10px;
     order: 5;
   }
+`;
+
+export const ErrorSpan = styled.span`
+  bottom: 0; 
+  left: 24px;
+  letter-spacing: .1px;
+  position: absolute;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: red;
 `;

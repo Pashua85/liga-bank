@@ -1,6 +1,6 @@
 import React, {FunctionComponent, useState, useEffect} from 'react';
 import {FormBackground, Form, HeaderRow, Logo, LogoIcon, LogoText, LogoTitle, LogoSubtitle, CloseButton,
-  SubmitButton, Input, InputGroup, Label, PasswordInput, ForgetLink, PasswordButton} from './style';
+  SubmitButton, Input, InputGroup, Label, PasswordInput, ForgetLink, PasswordButton, ErrorSpan} from './style';
 
 interface LoginFormProps {
   onCloseClick: () => void
@@ -11,6 +11,8 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
   const [login, setLogin] = useState(``);
   const [password, setPassword] = useState(``);
   const [isShown, setIsShown] = useState(false);
+  const [loginError, setLoginError] = useState(``);
+  const [passwordError, setPasswordError] = useState(``);
 
   useEffect(() => {
     const closeForm = (e: KeyboardEvent) => {
@@ -23,6 +25,24 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
       window.removeEventListener(`keydown`, closeForm);
     };
   });
+
+  const validateLogin = () => {
+    if (login.length > 0) {
+      return true;
+    } else {
+      setLoginError(`Укажите логин`);
+      return false;
+    }
+  };
+
+  const validatePassword = () => {
+    if (password.length > 0) {
+      return true;
+    } else {
+      setPasswordError(`Укажите пароль`);
+      return false;
+    }
+  };
 
   const handleLoginChange = (e: React.SyntheticEvent) => {
     setLogin((e.target as HTMLInputElement).value);
@@ -38,7 +58,9 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
 
   const handleFormSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    onFormSubmit();
+    if (validateLogin() && validatePassword()) {
+      onFormSubmit();
+    }
   };
 
   return (
@@ -64,6 +86,7 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
             placeholder=""
             autoFocus
           />
+          <ErrorSpan>{loginError}</ErrorSpan>
         </InputGroup>
         <InputGroup name="password">
           <Label>Пароль</Label>
@@ -91,6 +114,7 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
           >
             скрыть пароль
           </PasswordButton>
+          <ErrorSpan>{passwordError}</ErrorSpan>
         </InputGroup>
         <ForgetLink href="#">Забыли пароль?</ForgetLink>
         <SubmitButton>Войти</SubmitButton>
