@@ -68,7 +68,7 @@ const DesktopServices: FunctionComponent = () => {
               <CardItem>Разнообразные условия</CardItem>
               <CardItem>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</CardItem>
             </CardList>
-            <CardLink href="/">Узнать подробнее</CardLink>
+            <CardLink href="#">Узнать подробнее</CardLink>
           </CardColumn>
           <CardImage imageUrl={piggyBank} />
         </Card>
@@ -100,7 +100,7 @@ const DesktopServices: FunctionComponent = () => {
               <CardItem>Страхование жизни и здоровья</CardItem>
               <CardItem>Страхование недвижимости</CardItem>
             </CardList>
-            <CardLink href="/">Узнать подробнее</CardLink>
+            <CardLink href="#">Узнать подробнее</CardLink>
           </CardColumn>
           <CardImage imageUrl={lock} />
         </Card>
@@ -114,7 +114,7 @@ const DesktopServices: FunctionComponent = () => {
               <CardItem>Мобильный банк,<br/> который всегда под рукой</CardItem>
               <CardItem>Приложение Лига-проездной позволит<br/> вам оплачивать билеты по всему миру</CardItem>
             </CardList>
-            <CardLink href="/">Узнать подробнее</CardLink>
+            <CardLink href="#">Узнать подробнее</CardLink>
           </CardColumn>
           <CardImage imageUrl={phone} />
         </Card>

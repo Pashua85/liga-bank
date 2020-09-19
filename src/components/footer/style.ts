@@ -174,6 +174,7 @@ export const NavLink = styled.a`
 export const Contacts = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 52.27%;
 
   @media ${DEVICE.TABLET} {
@@ -188,6 +189,7 @@ export const Contacts = styled.div`
 `;
 
 export const ContactGroup = styled.div<{name: string}>`
+  margin-right: 10px;
   position: relative;
   padding-left: ${({name}) => name === `sms` ? `29px` : `33px`};
   padding-top: ${({name}) => name === `sms` ? `2px` : ``};
@@ -205,10 +207,12 @@ export const ContactGroup = styled.div<{name: string}>`
 
   @media ${DEVICE.TABLET} {
     margin-bottom: 21px;
+    margin-right: 0;
   }
 
   @media ${DEVICE.MOBILE} {
     margin-bottom: 16px;
+    margin-right: 0;
   }
 
   &:nth-child(2) {

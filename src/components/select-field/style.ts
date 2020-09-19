@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import icon from '../../assets/select-icon.svg';
-import {DEVICE} from '../../variables';
+import {DEVICE, HOVER_FONT_COLOR} from '../../variables';
 
 export const Field = styled.div<{isOpen: boolean, state: string, isChosen: boolean}>`
   border: 1px solid #1F1E25;
   border-radius: ${({isOpen}) => isOpen ? `4px 4px 0 0` : `4px 4px 4px 4px`};
+  cursor: pointer;
   font-size: 16px;
   font-weight: 500;
   height: 60px;
@@ -64,5 +65,9 @@ export const Item = styled.li`
 
   &:not(:last-child) {
     border-bottom: 1px solid #C1C2CA;
+  }
+
+  &:hover {
+    color: ${HOVER_FONT_COLOR}
   }
 `;
