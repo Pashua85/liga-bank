@@ -21,10 +21,22 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
       }
     };
     window.addEventListener(`keydown`, closeForm);
+
     return () => {
       window.removeEventListener(`keydown`, closeForm);
     };
   });
+
+  useEffect(() => {
+    const newLogin = localStorage.getItem(`login`);
+    const newPassword = localStorage.getItem(`password`);
+    if (newLogin !== null) {
+      setLogin(newLogin);
+    }
+    if (newPassword !== null) {
+      setPassword(newPassword);
+    }
+  }, []);
 
   const validateLogin = () => {
     if (login.length > 0) {
@@ -59,6 +71,8 @@ const LoginForm: FunctionComponent<LoginFormProps> = ({onCloseClick, onFormSubmi
   const handleFormSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (validateLogin() && validatePassword()) {
+      localStorage.setItem(`login`, login);
+      localStorage.setItem(`password`, password);
       onFormSubmit();
     }
   };
