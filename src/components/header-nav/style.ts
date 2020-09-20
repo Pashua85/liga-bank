@@ -49,7 +49,9 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled.a`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto','Work-Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   display: inline-block;
   color: ${MAIN_FONT_COLOR};
   text-decoration: none;
