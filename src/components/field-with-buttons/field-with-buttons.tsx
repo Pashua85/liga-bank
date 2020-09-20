@@ -55,9 +55,14 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
     }
   };
 
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = parseInt(event.target.value.trim(), 10);
+    let newValue: number;
+    if (event.target.value.length === 0) {
+      newValue = 0;
+    } else {
+      const newValueMatch = event.target.value.match(/\d+/g);
+      newValue = newValueMatch !== null ? parseInt(newValueMatch.join(``), 10) : 0;
+    }
     setInputValue(newValue);
     if (validate(newValue)) {
       onValidChange(newValue);
@@ -74,14 +79,13 @@ const FieldWithButtons: FunctionComponent<FieldWithButtonsProps> = ({value, minV
         <Button name="decrease" isDisabled={inputValue <= minValue} onClick={handleDecreaseClick} />
         <InnerField>
           <Input
-            type="number"
+            type="text"
             lang="en-150"
-            value={inputValue}
+            value={`${inputValue.toLocaleString()} ${getCurrencyWord(inputValue)}`}
             onChange={handleInputChange}
             min={minValue}
             max={maxValue}
           />
-          <Span>{getCurrencyWord(inputValue)}</Span>
         </InnerField>
         <ErrorSpan>{errorMessage}</ErrorSpan>
         <Button name="increase" isDisabled={inputValue >= maxValue} onClick={handleIncreaseClick} />

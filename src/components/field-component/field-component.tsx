@@ -17,8 +17,14 @@ const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, 
     setInputValue(value);
   }, [value]);
 
-  const handleInputChange = (e: React.SyntheticEvent) => {
-    const newValue = parseInt((e.target as HTMLInputElement).value, 10);
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    let newValue: number;
+    if (event.target.value.length === 0) {
+      newValue = 0;
+    } else {
+      const newValueMatch = event.target.value.match(/\d+/g);
+      newValue = newValueMatch !== null ? parseInt(newValueMatch.join(``), 10) : 0;
+    }
     setInputValue(newValue);
     if ((newValue >= min) && (newValue <= max)) {
       onValidChange(newValue);
@@ -41,12 +47,11 @@ const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, 
       <Field>
         <InnerField>
           <Input
-            type="number"
-            value={inputValue}
+            type="text"
+            value={`${inputValue.toLocaleString()} ${items}`}
             onChange={handleInputChange}
             onBlur={handleBlur}
           />
-          <Span>{items}</Span>
         </InnerField>
       </Field>
     </Container>

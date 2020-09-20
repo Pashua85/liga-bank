@@ -45,14 +45,13 @@ export const InnerField = styled.div`
 export const Input = styled.input`
   appearance: textfield;
   border: none;
-  margin-right: 5px;
   font-weight: 500;
   font-size: 17.8px;
   font-family: 'Roboto', sans-serif;
   outline: none;
   padding: 0%;
-  text-align: right;
-  width: 50%;
+  text-align: center;
+  width: 100%;
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
