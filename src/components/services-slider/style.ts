@@ -134,7 +134,7 @@ export const Button = styled.a`
     font-size: 13.9px;
     height: 43px;
     line-height: 43px;
-    width: 100%;
+    width: 290px;
   }
 `;
 

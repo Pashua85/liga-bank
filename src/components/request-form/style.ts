@@ -102,7 +102,7 @@ export const InputField = styled.div<{name: string}>`
   &:not(:last-child) {
     margin-bottom: 30px;
 
-    @media ${DEVICE.TABLET} {
+    @media ${DEVICE.MOBILE} {
       margin-bottom: 20px;
     }
   }
@@ -110,7 +110,7 @@ export const InputField = styled.div<{name: string}>`
   &:last-child {
     margin-bottom: 40px;
 
-    @media ${DEVICE.TABLET} {
+    @media ${DEVICE.MOBILE} {
       margin-bottom: 30px;
     }
   }

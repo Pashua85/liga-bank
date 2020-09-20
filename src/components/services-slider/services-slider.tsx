@@ -2,7 +2,6 @@ import React, {FunctionComponent, useState, useEffect} from 'react';
 import './style.scss';
 import Slider from '../slider/slider';
 import {Slide, Title, List, ListItem, Button, Text, Link, Column, Image} from './style';
-import {useViewport} from '../../hooks/useViewport';
 import {chooseSrc} from '../../assets/chooseSrc';
 import piggyBankDesk from '../../assets/piggybank-desk.jpg';
 import piggyBankTab from '../../assets/piggybank-tab.jpg';
@@ -19,6 +18,26 @@ import phonePhone from '../../assets/phone-phone.jpg';
 
 const ServicesSlider: FunctionComponent = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [piggyBank, setPiggyBank] = useState(chooseSrc(width, {
+    deskSrc: piggyBankDesk,
+    tabSrc: piggyBankTab,
+    mobileSrc: piggyBankPhone
+  }));
+  const [car, setCar] = useState(chooseSrc(width, {
+    deskSrc: carDesk,
+    tabSrc: carTab,
+    mobileSrc: carPhone
+  }));
+  const [lock, setLock] = useState(chooseSrc(width, {
+    deskSrc: lockDesk,
+    tabSrc: lockTab,
+    mobileSrc: lockPhone
+  }));
+  const [phone, setPhone] = useState(chooseSrc(width, {
+    deskSrc: phoneDesk,
+    tabSrc: phoneTab,
+    mobileSrc: phonePhone
+  }));
 
   const handleResize = () => {
     setWidth(window.innerWidth);
@@ -29,7 +48,30 @@ const ServicesSlider: FunctionComponent = () => {
     return () => {
       window.removeEventListener(`resize`, handleResize);
     };
-  });
+  }, []);
+
+  useEffect(() => {
+    setPiggyBank(chooseSrc(width, {
+      deskSrc: piggyBankDesk,
+      tabSrc: piggyBankTab,
+      mobileSrc: piggyBankPhone
+    }));
+    setCar(chooseSrc(width, {
+      deskSrc: carDesk,
+      tabSrc: carTab,
+      mobileSrc: carPhone
+    }));
+    setLock(chooseSrc(width, {
+      deskSrc: lockDesk,
+      tabSrc: lockTab,
+      mobileSrc: lockPhone
+    }));
+    setPhone(chooseSrc(width, {
+      deskSrc: phoneDesk,
+      tabSrc: phoneTab,
+      mobileSrc: phonePhone
+    }));
+  }, [width]);
 
 
   const slides = [
@@ -43,11 +85,7 @@ const ServicesSlider: FunctionComponent = () => {
         </List>
         <Button>Узнать подробнее</Button>
       </Column>
-      <Image imageUrl={chooseSrc(width, {
-        deskSrc: piggyBankDesk,
-        tabSrc: piggyBankTab,
-        mobileSrc: piggyBankPhone
-      })} />
+      <Image imageUrl={piggyBank} />
     </Slide>,
     <Slide>
       <Column>
@@ -59,11 +97,7 @@ const ServicesSlider: FunctionComponent = () => {
         </List>
         <Text>Рассчитайте ежемесячный платеж<br/> и ставку по кредиту воспользовавшись нашим <Link href="#calculator">кредитным калькулятором</Link></Text>
       </Column>
-      <Image imageUrl={chooseSrc(width, {
-        deskSrc: carDesk,
-        tabSrc: carTab,
-        mobileSrc: carPhone
-      })} />
+      <Image imageUrl={car} />
     </Slide>,
     <Slide>
       <Column>
@@ -75,11 +109,7 @@ const ServicesSlider: FunctionComponent = () => {
         </List>
         <Button>Узнать подробнее</Button>
       </Column>
-      <Image imageUrl={chooseSrc(width, {
-        deskSrc: lockDesk,
-        tabSrc: lockTab,
-        mobileSrc: lockPhone
-      })} />
+      <Image imageUrl={lock} />
     </Slide>,
     <Slide>
       <Column>
@@ -90,11 +120,7 @@ const ServicesSlider: FunctionComponent = () => {
         </List>
         <Button>Узнать подробнее</Button>
       </Column>
-      <Image imageUrl={chooseSrc(width, {
-        deskSrc: phoneDesk,
-        tabSrc: phoneTab,
-        mobileSrc: phonePhone
-      })}/>
+      <Image imageUrl={phone}/>
     </Slide>
   ];
 
