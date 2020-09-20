@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d091b20c5ce3060d840aa628053e35ce",
+    "revision": "e2acd0d95dbd251c54cca2fa83ff5ca7",
     "url": "/liga-bank/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "96f0900a548d5c8c081b",
+    "revision": "bd29391f65dcd2f4b2fd",
     "url": "/liga-bank/static/css/main.cb46d9ec.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/js/2.f4785990.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "96f0900a548d5c8c081b",
-    "url": "/liga-bank/static/js/main.f3eb867f.chunk.js"
+    "revision": "bd29391f65dcd2f4b2fd",
+    "url": "/liga-bank/static/js/main.73e9027d.chunk.js"
   },
   {
     "revision": "467e6a30de2769c04192",
@@ -92,16 +92,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/WorkSans-Bold.a0bf66dd.ttf"
   },
   {
-    "revision": "13215b3ecbaadf5dc1aeb72f556eea2b",
-    "url": "/liga-bank/static/media/car-desk.13215b3e.jpg"
+    "revision": "150f4aeac47bd90cfcb54ab9bf3e0667",
+    "url": "/liga-bank/static/media/car-desk.150f4aea.jpg"
   },
   {
-    "revision": "dae7b50f0acbeaac2622c7c33b0807cb",
-    "url": "/liga-bank/static/media/car-phone.dae7b50f.jpg"
-  },
-  {
-    "revision": "c679ecdebece9a2f58bd308a2ee53861",
-    "url": "/liga-bank/static/media/car-tab.c679ecde.jpg"
+    "revision": "ad781d5805a58d7e9ac8cd18124d63e9",
+    "url": "/liga-bank/static/media/car-tab.ad781d58.jpg"
   },
   {
     "revision": "92accfd79ecd67afba24536d88dde759",
@@ -148,18 +144,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/location.5c1d0d4c.svg"
   },
   {
-    "revision": "fab33c84c731741d5a967cfe048677a3",
-    "url": "/liga-bank/static/media/lock-desk.fab33c84.jpg"
-  },
-  {
-    "revision": "e8ab1b09f391e37d3379bbd1bad53193",
-    "url": "/liga-bank/static/media/lock-phone.e8ab1b09.jpg"
-  },
-  {
-    "revision": "8254211964b094107703be53e2a63fbf",
-    "url": "/liga-bank/static/media/lock-tab.82542119.jpg"
-  },
-  {
     "revision": "6cd2f929da046cdbe3d26dfa2d4df34d",
     "url": "/liga-bank/static/media/logo-big.6cd2f929.svg"
   },
@@ -176,24 +160,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/mobile-icon.90511246.svg"
   },
   {
-    "revision": "9ee8aabfcf732fea94b222116b3770a6",
-    "url": "/liga-bank/static/media/phone-desk.9ee8aabf.jpg"
-  },
-  {
-    "revision": "21122387347fd50cc08f7d287e7db144",
-    "url": "/liga-bank/static/media/phone-tab.21122387.jpg"
-  },
-  {
     "revision": "72cb17cab2119e64efcc1f4123dfeb26",
     "url": "/liga-bank/static/media/phone.72cb17ca.svg"
-  },
-  {
-    "revision": "1faa906a6032e430d95ce71c96517295",
-    "url": "/liga-bank/static/media/piggybank-desk.1faa906a.jpg"
-  },
-  {
-    "revision": "aaed969187573366aaada7f6a7fdfdf1",
-    "url": "/liga-bank/static/media/piggybank-tab.aaed9691.jpg"
   },
   {
     "revision": "7268bf123358d90bbc8e0dff06182167",
@@ -208,40 +176,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/liga-bank/static/media/select-icon.e6330e81.svg"
   },
   {
-    "revision": "a26fed1566f4c2056094a30fddcc70c8",
-    "url": "/liga-bank/static/media/slide-1-desk.a26fed15.jpg"
+    "revision": "57b7c32a3ae5af77d20790683a77aeac",
+    "url": "/liga-bank/static/media/slide-1-desk.57b7c32a.jpg"
   },
   {
-    "revision": "b3a1c6570708f4a96f526ac385c2f0b1",
-    "url": "/liga-bank/static/media/slide-1-mobile.b3a1c657.jpg"
+    "revision": "afd0e6c9c53fa1bd2f782f651ae935ea",
+    "url": "/liga-bank/static/media/slide-2-desk.afd0e6c9.jpg"
   },
   {
-    "revision": "7a62924c2ce90ed5dcd9b4392551be5b",
-    "url": "/liga-bank/static/media/slide-1-tab.7a62924c.jpg"
+    "revision": "3e2342d087c69c7688f2665b64ece415",
+    "url": "/liga-bank/static/media/slide-2-tab.3e2342d0.jpg"
   },
   {
-    "revision": "ce8a2e02790c26b76da59ee4cb6ca9ac",
-    "url": "/liga-bank/static/media/slide-2-desk.ce8a2e02.jpg"
+    "revision": "86608b963ed8313d40105f42945ee5f2",
+    "url": "/liga-bank/static/media/slide-3-desk.86608b96.jpg"
   },
   {
-    "revision": "cbe2ddb154f5b27771a9bf626d113b61",
-    "url": "/liga-bank/static/media/slide-2-mobile.cbe2ddb1.jpg"
+    "revision": "c785ae1d1eda74f2921908bd93fc9acf",
+    "url": "/liga-bank/static/media/slide-3-mobile.c785ae1d.jpg"
   },
   {
-    "revision": "86a75b65a68c9f0f423774db2dcd4f22",
-    "url": "/liga-bank/static/media/slide-2-tab.86a75b65.jpg"
-  },
-  {
-    "revision": "475d11c6b918a2e292ed7a4269b7d699",
-    "url": "/liga-bank/static/media/slide-3-desk.475d11c6.jpg"
-  },
-  {
-    "revision": "b28eca6db715bb0ed90c2aef403758a8",
-    "url": "/liga-bank/static/media/slide-3-mobile.b28eca6d.jpg"
-  },
-  {
-    "revision": "2c54a215d89ced1b313583cda5a89cd8",
-    "url": "/liga-bank/static/media/slide-3-tab.2c54a215.jpg"
+    "revision": "9faa10df459b4f904970574b3c31d557",
+    "url": "/liga-bank/static/media/slide-3-tab.9faa10df.jpg"
   },
   {
     "revision": "4963a3b5b2e300d8383b85341ada8fea",
