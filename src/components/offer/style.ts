@@ -64,15 +64,21 @@ export const Item = styled.div`
   @media ${DEVICE.TABLET} {
     margin-right: 50px;
     margin-bottom: 26px;
+    
+    &:nth-child(3) {
+      margin-right: 62px;
+    }
   }
 
-  &:nth-child(3) {
-    margin-right: 62px;
-  }
+  
 
   @media ${DEVICE.MOBILE} {
     margin-right: 0;
     margin-bottom: 13px;
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
   }
 `;
 
