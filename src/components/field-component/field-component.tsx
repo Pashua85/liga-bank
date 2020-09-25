@@ -28,6 +28,8 @@ const FieldComponent: FunctionComponent<FieldProps> = ({title, value, min, max, 
     setInputValue(newValue);
     if ((newValue >= min) && (newValue <= max)) {
       onValidChange(newValue);
+    } else if (newValue > max) {
+      onValidChange(max);
     }
   };
 

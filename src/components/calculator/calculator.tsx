@@ -58,7 +58,7 @@ const Calculator: FunctionComponent = () => {
     } else if (calculatorType === `Потребительский кредит`) {
       setValue(100000);
       setTermInYears(1);
-      setSalaryProject(true);
+      setSalaryProject(false);
       setMinLoanAmount(50000);
       setIsAmmountCorrect(true);
       setInterestRate(14.5);
