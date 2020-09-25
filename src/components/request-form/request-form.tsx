@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useState} from 'react';
+import React, {FunctionComponent, useState, useEffect} from 'react';
 import {useViewport} from '../../hooks/useViewport';
 import isEmail from 'validator/es/lib/isEmail';
 import {Form, Header, List, Item, ItemLabel, ItemValue, InputGroup, Input, InputField, Button, ErrorSpan,
@@ -25,6 +25,22 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
   const [emailError, setEmailError] = useState(``);
   const [isMessageShown, setIsMessageShown] = useState(false);
 
+  useEffect(() => {
+    const newName = localStorage.getItem(`name`);
+    const newPhone = localStorage.getItem(`phone`);
+    const newEmail = localStorage.getItem(`email`);
+
+    if (newName !== null) {
+      setName(newName);
+    }
+    if (newPhone !== null) {
+      setPhone(newPhone);
+    }
+    if (newEmail !== null) {
+      setEmail(newEmail);
+    }
+  }, []);
+
   const validate = (): boolean => {
     if (name.length === 0) {
       setNameError(`Укажите Ваши имя и фамилию`);
@@ -44,7 +60,6 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
   };
 
   const {width} = useViewport();
-
 
   const handleNameChange = (e: React.SyntheticEvent): void => {
     setNameError(``);
@@ -67,6 +82,9 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
   const handleFormSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (validate()) {
+      localStorage.setItem(`name`, name);
+      localStorage.setItem(`phone`, phone);
+      localStorage.setItem(`email`, email);
       setIsMessageShown(true);
     }
   };
