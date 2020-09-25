@@ -136,7 +136,7 @@ export const Login = styled.a`
   line-height: 19px;
   margin-left: auto;
   text-decoration: none;
-  padding-left: 30px;
+  padding-left: 40px;
   position: relative;
   user-select: none;
 
@@ -146,7 +146,7 @@ export const Login = styled.a`
 
   @media ${DEVICE.TABLET} {
     font-size: 0;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   @media ${DEVICE.MOBILE} {
@@ -167,7 +167,7 @@ export const Login = styled.a`
     background-image: url(${enterImg});
     content: '';
     height: 22px;
-    left: 0;
+    left: 10px;
     margin-top: -12px;
     position: absolute;
     top: 50%;

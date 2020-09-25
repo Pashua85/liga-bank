@@ -21,6 +21,7 @@ export const Nav = styled.nav<{isOpen: boolean, state: string}>`
 
 export const NavList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
 
