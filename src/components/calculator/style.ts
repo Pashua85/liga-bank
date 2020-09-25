@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import {CONTENT_WIDTH, DEVICE} from '../../variables';
+import {CalculatorType} from './calculator';
 
-export const Container = styled.div`
+export const Container = styled.div<{type: CalculatorType, isFormShown: boolean}>`
   margin: 0 auto;
-  margin-bottom: 97px;
+  margin-bottom: ${({type, isFormShown}) => (type === null) || isFormShown ? `97px` : `87px`};
   max-width: 1645px;
   width: ${CONTENT_WIDTH.DESK};
 

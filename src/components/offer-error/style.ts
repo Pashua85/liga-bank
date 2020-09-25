@@ -10,8 +10,16 @@ export const Container = styled.div`
   width: 500px;
   height: fit-content;
 
+  @media (max-width: 1300px) {
+    width: 45%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   @media ${DEVICE.TABLET} {
     width: 100%;
+    padding-right: none;
+    padding-left: 52px;
   }
 
   @media ${DEVICE.MOBILE} {
@@ -27,6 +35,14 @@ export const Title = styled.p`
   line-height: 31px;
   margin-bottom: 25px;
   width: 370px;
+
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
+
+  @media ${DEVICE.TABLET} {
+    width: 370px;
+  }
 
   @media ${DEVICE.MOBILE} {
     width: 77%;

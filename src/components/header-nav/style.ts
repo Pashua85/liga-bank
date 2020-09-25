@@ -35,7 +35,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   
   &:not(:last-child) {
-    margin-right: 25px;
+    margin-right: 26px;
 
     @media ${DEVICE.TABLET} {
       margin-right: 20px;

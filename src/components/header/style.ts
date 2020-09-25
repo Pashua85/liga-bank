@@ -80,7 +80,7 @@ export const Logo = styled.div`
   font-weight: bold;
   letter-spacing: .05rem;
   line-height: 23px;
-  margin-right: 58px;
+  margin-right: 59px;
   position: relative;
   user-select: none;
 

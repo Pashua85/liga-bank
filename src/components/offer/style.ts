@@ -59,7 +59,11 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
-  margin-right: 10px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  
 
   @media ${DEVICE.TABLET} {
     margin-right: 50px;
