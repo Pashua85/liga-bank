@@ -1,5 +1,4 @@
 import React, {FunctionComponent, useState, useEffect} from 'react';
-import {useViewport} from '../../hooks/useViewport';
 import isEmail from 'validator/es/lib/isEmail';
 import {Form, Header, List, Item, ItemLabel, ItemValue, InputGroup, Input, InputField, Button, ErrorSpan,
   MessageBackground, MessageCard, MessageTitle, MessageText, CloseButton} from './style';
@@ -58,8 +57,6 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
       return false;
     }
   };
-
-  const {width} = useViewport();
 
   const handleNameChange = (e: React.SyntheticEvent): void => {
     setNameError(``);
@@ -167,18 +164,9 @@ const RequestForm: FunctionComponent<RequestFormProps> = ({requestNumber, calcul
           <ErrorSpan>{emailError}</ErrorSpan>
         </InputField>
       </InputGroup>
-      {
-        width <= 1023 &&
-        <Button type="submit">
-          Оформить заявку
-        </Button>
-      }
-      {
-        width > 1023 &&
-        <Button type="submit">
-          Отправить
-        </Button>
-      }
+      <Button type="submit">
+        Отправить
+      </Button>
 
       {
         isMessageShown &&

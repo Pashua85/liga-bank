@@ -10,7 +10,7 @@ export const Container = styled.div<{type: CalculatorType, isFormShown: boolean}
 
   @media ${DEVICE.TABLET} {
     width: ${CONTENT_WIDTH.TAB};
-    margin-bottom: 44px;
+    margin-bottom: ${({type}) => type === null ? `44px` : `69px`}
   }
 
   @media ${DEVICE.MOBILE} {

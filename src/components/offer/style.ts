@@ -68,6 +68,10 @@ export const Item = styled.div`
   @media ${DEVICE.TABLET} {
     margin-right: 50px;
     margin-bottom: 26px;
+
+    &:nth-child(1) {
+      margin-right: 50px;
+    }
     
     &:nth-child(3) {
       margin-right: 62px;
