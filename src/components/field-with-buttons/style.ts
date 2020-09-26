@@ -61,6 +61,10 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 16px;
+  }
 `;
 
 export const Span = styled.span`
@@ -96,6 +100,10 @@ export const Button = styled.div<{name: string, isDisabled: boolean}>`
   &[name="increase"] {
     background-image: url(${plus});
     margin-right: 19px;
+
+    @media ${DEVICE.MOBILE} {
+      margin-right: 10px;
+    }
   }
 
   &[name="decrease"] {

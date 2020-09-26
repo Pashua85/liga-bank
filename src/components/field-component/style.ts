@@ -58,6 +58,10 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
+
+  @media ${DEVICE.MOBILE} {
+    font-size: 16px;
+  }
 `;
 
 export const Span = styled.span`

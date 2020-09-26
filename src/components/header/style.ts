@@ -174,6 +174,7 @@ export const Login = styled.a`
     width: 20px;
 
     @media ${DEVICE.MOBILE} {
+      left: 0px;
       background-size: contain;
       height: 16px;
       margin-top: -8px;

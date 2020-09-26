@@ -15,9 +15,8 @@ export const Container = styled.div<{type: CalculatorType, isFormShown: boolean}
 
   @media ${DEVICE.MOBILE} {
     width: ${CONTENT_WIDTH.MOBILE};
-    margin-bottom: 39px;
+    margin-bottom: ${({isFormShown}) => isFormShown ? `53px` : `39px`};
   }
-
 `;
 
 export const Header = styled.h2`
