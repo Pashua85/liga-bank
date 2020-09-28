@@ -11,6 +11,7 @@ import RequestForm from '../request-form/request-form';
 import {CheckboxWrapper} from '../departments/style';
 import {getCurrencyWord} from '../../assets/getCurrencyWord';
 import {getYearsWord} from '../../assets/getYearsWord';
+import { isNoSubstitutionTemplateLiteral } from 'typescript';
 
 export type CalculatorType = `Ипотечное кредитование` | `Автомобильное кредитование` | `Потребительский кредит` | null;
 
@@ -104,19 +105,19 @@ const Calculator: FunctionComponent = () => {
       if (loanAmount >= minLoanAmount) {
         setAmountError(``);
       } else {
-        setAmountError(`Наш банк не выдаёт ипотечные кредиты меньше 500 000 рублей.`);
+        setAmountError(`Наш банк не выдаёт ипотечные кредиты меньше 500${`\u00A0`}000 рублей.`);
       }
     } else if (calculatorType === `Автомобильное кредитование`) {
       if (loanAmount >= minLoanAmount) {
         setAmountError(``);
       } else {
-        setAmountError(`Наш банк не выдаёт автокредиты меньше 200 000 рублей.`);
+        setAmountError(`Наш банк не выдаёт автокредиты меньше 200${`\u00A0`}000 рублей.`);
       }
     } else if (calculatorType === `Потребительский кредит`) {
       if (loanAmount >= minLoanAmount) {
         setAmountError(``);
       } else {
-        setAmountError(`Наш банк не выдаёт потребительские редиты меньше 50 000 рублей.`);
+        setAmountError(`Наш банк не выдаёт потребительские редиты меньше 50${`\u00A0`}000 рублей.`);
       }
     }
   }, [calculatorType, loanAmount, minLoanAmount]);
